@@ -13,14 +13,15 @@
     ]
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon -r dotenv/config server.js",
+    "start": "node -r dotenv/config server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/osycon/chingu-bears-temp.git"
   },
   "author": "Osycon, Kmadill, Linus",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/osycon/chingu-bears-temp/issues"
   },
@@ -31,6 +32,10 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-es2016": "^6.24.1",
     "browserslist": "^2.2.2",
+    "dotenv": "^4.0.0",
     "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
