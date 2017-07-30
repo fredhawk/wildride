@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Hero from './Hero';
-import FeaturedList from '../containers/FeaturedList';
+import Hero from '../components/Hero';
+import FeaturedList from '../components/FeaturedList';
 import { jobs } from '../models/data.json';
 
 class App extends Component {
