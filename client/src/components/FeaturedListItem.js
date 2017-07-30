@@ -1,7 +1,6 @@
 import React from 'react';
 
 const FeaturedListItem = props => {
-  console.log(props);
   const { title, location, description, apply, save } = props.featured;
   return (
     <div className="Featured-item">

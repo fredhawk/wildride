@@ -1,3 +1,57 @@
+.Hero {
+  height: 100vh;
+  background-color: #1c75bc;
+  margin-top: 80px;
+  padding-top: 50px;
+  color: white;
+}
+
+.Hero-wrapper {
+  background-image: url(https://jobbatical.com/dist/e6a6a345f58b4dd96b765c42abab3538.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 140px;
+  height: 100%;
+}
+
 .Hero-title {
+  font-size: 3em;
+  font-weight: 200;
+  line-height: 23px;
+}
+
+.Hero-title__see-world {
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.Hero-navigation {
+}
+
+.Hero-btn {
+  background-color: #1db6ef;
+  margin-right: 25px;
+  margin-left: 25px;
+  padding: 20px 32px;
+  cursor: pointer;
+  border-radius: 5px;
   text-transform: uppercase;
+  vertical-align: middle;
+  font-weight: 400;
+  font-size: 0.9em;
+  line-height: 2em;
+  box-shadow: 0 10px 10px 0 rgba(8, 57, 96, .15);
+  color: white;
+}
+
+.Hero-btn-explore {
+}
+
+.Hero-btn-employer {
+}
+
+.Hero-tagline {
+}
+
+.Hero-availability {
 }
