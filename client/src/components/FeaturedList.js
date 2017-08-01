@@ -6,7 +6,7 @@ const FeaturedList = props => {
     <div>
       <h1 className="Featuredlist-title">Featured jobs</h1>
       <ul>
-        {props.jobs.map(job => <FeaturedListItem featured={job} key={job.id} />)}
+        {props.jobs.filter((job, index) => index < 6).map(job => <FeaturedListItem featured={job} key={job.id} />)}
       </ul>
     </div>
   );
