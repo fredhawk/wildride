@@ -7,7 +7,8 @@
 }
 
 .Featured-item__picture {
-  height: 200px;
+  height: 240px;
+  /* height: 200px; */
   display: block;
 }
 
@@ -16,7 +17,9 @@
 }
 
 .Featured-item__info {
-  min-height: 150px;
+  min-height: 130px;
+  /* min-height: 170px; */
+  max-height: 250px;
   margin-bottom: 1em;
   border-bottom: 1px lightgray solid;
 }
@@ -36,6 +39,11 @@
 .Featured-item__description {
   font-size: 0.9em;
   font-weight: 300;
+  height: 0;
+  /* height: 40px; */
+  overflow: hidden;
+  /* opacity: 0; */
+  transition: opacity .4s linear;
 }
 
 .Featured-item__footer {
