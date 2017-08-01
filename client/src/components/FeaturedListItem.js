@@ -1,10 +1,13 @@
 import React from 'react';
+import './FeaturedListItem.css';
 
 const FeaturedListItem = props => {
   const { title, location, description, apply, save } = props.featured;
   return (
     <div className="Featured-item">
-      <img src="#" alt="random" className="Featured-item__img" />
+      <picture className="Featured-item__picture">
+        <img src="#" alt="random" className="Featured-item__img" />
+      </picture>
       <div className="Featured-item__content">
         <div className="Featured-item__info">
           <h3 className="Featured-item__title">
@@ -17,12 +20,14 @@ const FeaturedListItem = props => {
             {description}
           </p>
         </div>
-        <div className="Featured-item__apply">
-          {apply} to apply
-        </div>
-        <div className="Featured-item__save">
-          {save ? `Saved` : `Not Saved`}
-        </div>
+        <footer className="Featured-item__footer">
+          <div className="Featured-item__footer--apply">
+            <span className="Featured-item__footer--days">{apply} days</span> to apply
+          </div>
+          <div className="Featured-item__footer--save">
+            {save ? `Saved` : `Not Saved`}
+          </div>
+        </footer>
       </div>
     </div>
   );
