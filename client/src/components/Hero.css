@@ -1,16 +1,22 @@
 .Hero {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #1c75bc;
-  margin-top: 80px;
-  padding-top: 50px;
   color: white;
+  font-size: 13px;
+}
+@media (min-width: 480px) {
+  .Hero {
+    margin-top: 80px;
+    padding-top: 50px;
+    font-size: 16px;
+  }
 }
 
 .Hero-wrapper {
   background-image: url(https://jobbatical.com/dist/e6a6a345f58b4dd96b765c42abab3538.svg);
   background-repeat: no-repeat;
   background-position: top;
-  padding-top: 140px;
+  padding-top: 40px;
   height: 100%;
 }
 
@@ -63,6 +69,7 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
+  width: 90%;
 }
 
 .Hero-availability {
@@ -72,5 +79,6 @@
   font-size: 2.2em;
   font-weight: 300;
   line-height: 2em;
+  width: 90%;
   max-width: 580px;
 }
