@@ -1,8 +1,8 @@
 .JobItem {
-  flex: 0 0 350px;
+  flex: 0 0 370px;
   border: 1px solid lightgray;
   border-radius: 5px;
-  margin: 0 1em 1em 1em;
+  margin: 0 auto 1em auto;
   text-align: left;
 }
 
