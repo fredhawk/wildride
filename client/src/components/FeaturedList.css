@@ -7,11 +7,3 @@
   color: #337ab7;
   text-transform: uppercase;
 }
-
-.FeaturedList-list-group {
-  margin: 0 auto;
-  padding: 0;
-  max-width: 1300px;
-  display: flex;
-  flex-flow: row wrap;
-}
