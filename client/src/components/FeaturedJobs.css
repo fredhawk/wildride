@@ -1,8 +1,8 @@
-.FeaturedList {
+.FeaturedJobs {
   display: flex;
   flex-flow: column nowrap;
 }
-.FeaturedList-title {
+.FeaturedJobs-title {
   font-size: 1.1em;
   color: #337ab7;
   text-transform: uppercase;
