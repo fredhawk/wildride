@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Hero from '../components/Hero';
 import FeaturedJobs from '../components/FeaturedJobs';
+import ExploreJobs from '../components/ExploreJobs';
 import { jobs } from '../models/data.json';
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
       <div className="App">
         <Hero />
         <FeaturedJobs jobs={this.state.jobs} />
+        <ExploreJobs jobs={this.state.jobs} />
       </div>
     );
   }
