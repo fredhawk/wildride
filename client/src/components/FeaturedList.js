@@ -1,5 +1,6 @@
 import React from 'react';
 import FeaturedListItem from '../components/FeaturedListItem';
+import './Featuredlist.css';
 
 const FeaturedList = props => {
   return (
