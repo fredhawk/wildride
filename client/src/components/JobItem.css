@@ -1,5 +1,5 @@
 .JobItem {
-  flex: 1 0 350px;
+  flex: 0 0 350px;
   border: 1px solid lightgray;
   border-radius: 5px;
   margin: 0 1em 1em 1em;
