@@ -6,7 +6,7 @@ const FeaturedListItem = props => {
   return (
     <div className="Featured-item">
       <picture className="Featured-item__picture">
-        <img src="#" alt="random" className="Featured-item__img" />
+        <img src="https://unsplash.it/600/400/?random" alt="random" className="Featured-item__img" />
       </picture>
       <div className="Featured-item__content">
         <div className="Featured-item__info">
