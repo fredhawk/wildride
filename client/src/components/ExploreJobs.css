@@ -2,10 +2,20 @@
 }
 
 .ExploreJobs-title {
+  font-size: 3.5em;
+  font-weight: 700;
+  line-height: 2em;
 }
 
-.ExploreJobs-search {
+.ExploreJobs-search-group {
 }
+
+.ExploreJobs-search__input {
+}
+
+.ExploreJobs-search__btn {
+}
+
 .ExploreJobs-matches {
   position: relative;
   font-size: 1.2em;
