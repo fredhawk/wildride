@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import JobList from './JobList';
+import JobList from '../components/JobList';
 import Search from './Search';
 import './ExploreJobs.css';
 
@@ -12,8 +12,9 @@ class ExploreJobs extends Component {
     };
   }
 
-  getMatches(searchResult) {
-    const matches = this.props.jobs.filter(job => job.title.match(searchResult) || job.location.match(searchResult) || job.description.match(searchResult));
+  getMatches(searchterm) {
+    const searchValue = new RegExp(searchterm, 'i');
+    const matches = this.props.jobs.filter(job => job.title.match(searchValue) || job.location.match(searchValue) || job.description.match(searchValue));
     this.setState({
       searchResult: matches,
       totalMatches: matches.length

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Hero from '../components/Hero';
 import FeaturedJobs from '../components/FeaturedJobs';
-import ExploreJobs from '../components/ExploreJobs';
+import ExploreJobs from '../containers/ExploreJobs';
 import { jobs } from '../models/data.json';
 
 class App extends Component {
