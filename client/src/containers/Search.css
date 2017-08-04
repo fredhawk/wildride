@@ -1,0 +1,25 @@
+.Search {
+  margin-bottom: 2em;
+  font-size: 1.1em;
+}
+
+.Search__input {
+  width: 200px;
+  padding: 1.3em;
+  border: 1px solid gray;
+  border-right: none;
+  border-radius: 3px 0 0 3px;
+  font-weight: 700;
+}
+
+.Search__btn {
+  width: 150px;
+  background: #04d092;
+  padding: 1.3em;
+  border: 1px solid gray;
+  border-right: none;
+  border-radius: 0 3px 3px 0;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
