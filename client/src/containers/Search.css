@@ -1,10 +1,10 @@
 .Search {
-  margin-bottom: 2em;
   font-size: 1.1em;
+  margin-bottom: 2em;
 }
 
 .Search__input {
-  width: 200px;
+  min-width: 175px;
   padding: 1.3em;
   border: 1px solid gray;
   border-right: none;
@@ -13,7 +13,7 @@
 }
 
 .Search__btn {
-  width: 150px;
+  min-width: 125px;
   background: #04d092;
   padding: 1.3em;
   border: 1px solid gray;
