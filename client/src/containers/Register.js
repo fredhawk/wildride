@@ -23,7 +23,7 @@ class Register extends Component {
             Password
           </label>
           <input type="password" className="Register__input" name="password" />
-          <input type="submit" className="Register__button" defaultValue="Register" />
+          <input type="submit" className="Register__button" defaultValue="Sign up" />
         </form>
       </section>
     );
