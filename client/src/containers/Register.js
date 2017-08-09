@@ -2,11 +2,16 @@ import React, { Component } from 'react';
 import './Register.css';
 
 class Register extends Component {
+  onSubmit(e) {
+    e.preventDefault();
+    console.log(`Submitted`);
+    console.log(`event`, e.target.firstname.value);
+  }
   render() {
     return (
       <section className="Register">
         <h2 className="Register__title">Register</h2>
-        <form action="#" method="POST" className="Register__form">
+        <form action="#" onSubmit={e => this.onSubmit(e)} className="Register__form">
           <label htmlFor="firstname" className="Register__label">
             First Name
           </label>
