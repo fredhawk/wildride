@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Hero from '../components/Hero';
-import FeaturedList from '../components/FeaturedList';
+import FeaturedJobs from '../components/FeaturedJobs';
+import ExploreJobs from '../containers/ExploreJobs';
 import { jobs } from '../models/data.json';
 
 class App extends Component {
@@ -16,7 +17,8 @@ class App extends Component {
     return (
       <div className="App">
         <Hero />
-        <FeaturedList jobs={this.state.jobs} />
+        <FeaturedJobs jobs={this.state.jobs} />
+        <ExploreJobs jobs={this.state.jobs} />
       </div>
     );
   }

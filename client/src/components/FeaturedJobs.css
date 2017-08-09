@@ -1,0 +1,9 @@
+.FeaturedJobs {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.FeaturedJobs-title {
+  font-size: 1.1em;
+  color: #337ab7;
+  text-transform: uppercase;
+}

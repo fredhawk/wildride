@@ -1,0 +1,42 @@
+.ExploreJobs {
+}
+
+.ExploreJobs-title {
+  font-size: 3.5em;
+  font-weight: 700;
+  line-height: 2em;
+}
+
+.ExploreJobs-search-group {
+}
+
+.ExploreJobs-search__input {
+}
+
+.ExploreJobs-search__btn {
+}
+
+.ExploreJobs-matches {
+  position: relative;
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-bottom: 3em;
+}
+
+.ExploreJobs-matches::before {
+  border-top: 1px solid #ccc;
+  content: "";
+  z-index: -1;
+  width: 95%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+.ExploreJobs-matches span {
+  background: white;
+  padding: 0 15px;
+}
