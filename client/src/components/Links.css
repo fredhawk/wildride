@@ -26,6 +26,13 @@
 .link-title {
     padding: 20px;
 }
+.link-list:last-child li{
+    position: relative;
+}
+.link-list:last-child i {
+    position: absolute;
+    right: 10px;
+}
 @media screen and (min-width: 540px) {
     .link-list {
         width: 40%;
