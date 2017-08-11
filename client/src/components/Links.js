@@ -6,7 +6,9 @@ const Links = () => {
     <div className="link-section">
       
       <div className="link-list">
+	  <div className="title-wrapper">
 		<strong className="link-title">FOR TALENT</strong>
+	  </div>
 		<ul>
 		<li><a href="#">HOME</a></li>
 		<li><a href="#">EXPLORE JOBS</a></li>
@@ -14,7 +16,9 @@ const Links = () => {
 		</ul>
       </div>
       <div className="link-list">
+	  <div className="title-wrapper">
 		<strong className="link-title">FOR BUSINESS</strong>
+	  </div>
 		<ul>
 		<li><a href="#">WHAT WE OFFER</a></li>
 		<li><a href="#">PRICING</a></li>
@@ -22,7 +26,9 @@ const Links = () => {
 		</ul>
       </div>
       <div className="link-list">
+	  <div className="title-wrapper">
 		<strong className="link-title">JOBBATICAL</strong>
+	  </div>
 		<ul>
 		<li><a href="#">OUR STORY & PEOPLE</a></li>
 		<li><a href="#">SUPPORT</a></li>
@@ -31,7 +37,9 @@ const Links = () => {
 		</ul>
       </div>
       <div className="link-list">
+	  <div className="title-wrapper">
 		<strong className="link-title">FOLLOW US</strong>
+	  </div>
 		<ul>
 		<li><a href="#">FACEBOOK <i className="fa fa-facebook-official"></i></a></li>
 		<li><a href="#">TWITTER <i className="fa fa-twitter-square"></i></a></li>
