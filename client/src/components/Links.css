@@ -25,12 +25,15 @@
     color: #999;
 }
 
-.link-list:last-child li{
-    position: relative;
+.social-media-text {
+    display: none;
 }
-.link-list:last-child i {
-    position: absolute;
-    right: 10px;
+.social-media-icons {
+        display: flex;
+        justify-content: space-around;
+    }
+.fa {
+    color: #1c75bc;
 }
 
 @media screen and (min-width: 540px) {
@@ -42,7 +45,20 @@
     border-bottom: 1px solid #ddd;
     padding-top: 20px;
     padding-bottom: 20px;
+    }
+    .link-list:last-child li{
+    position: relative;
 }
+.link-list:last-child i {
+    position: absolute;
+    right: 10px;
+}
+    .social-media-text {
+        display: block;
+    }
+    .social-media-icons {
+        display: none;
+    }
 }
 @media screen and (min-width: 744px) {
     .link-list {
@@ -61,4 +77,5 @@
     .link-list {
         width: 20%;
     }
+    
 }
