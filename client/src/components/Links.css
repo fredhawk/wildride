@@ -34,7 +34,7 @@
     color: #1c75bc;
 }
 
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 736px) {
     .link-list {
         width: 40%;
     }
@@ -57,8 +57,7 @@
     .social-media-icons {
         display: none;
     }
-}
-@media screen and (min-width: 744px) {
+
     .link-list {
         width: 30%;
     }
