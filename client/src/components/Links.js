@@ -6,7 +6,7 @@ const Links = () => {
     <div className="link-section">
       
       <div className="link-list">
-		<h4 className="link-title">FOR TALENT</h4>
+		<strong className="link-title">FOR TALENT</strong>
 		<ul>
 		<li><a href="#">HOME</a></li>
 		<li><a href="#">EXPLORE JOBS</a></li>
@@ -14,7 +14,7 @@ const Links = () => {
 		</ul>
       </div>
       <div className="link-list">
-		<h4 className="link-title">FOR BUSINESS</h4>
+		<strong className="link-title">FOR BUSINESS</strong>
 		<ul>
 		<li><a href="#">WHAT WE OFFER</a></li>
 		<li><a href="#">PRICING</a></li>
@@ -22,7 +22,7 @@ const Links = () => {
 		</ul>
       </div>
       <div className="link-list">
-		<h4 className="link-title">JOBBATICAL</h4>
+		<strong className="link-title">JOBBATICAL</strong>
 		<ul>
 		<li><a href="#">OUR STORY & PEOPLE</a></li>
 		<li><a href="#">SUPPORT</a></li>
@@ -31,13 +31,13 @@ const Links = () => {
 		</ul>
       </div>
       <div className="link-list">
-		<h4 className="link-title">FOLLOW US</h4>
+		<strong className="link-title">FOLLOW US</strong>
 		<ul>
-		<li><a href="#">FACEBOOK</a></li>
-		<li><a href="#">TWITTER</a></li>
-		<li><a href="#">LINKEDIN</a></li>
-		<li><a href="#">GOOGLE+</a></li>
-		<li><a href="#">INSTAGRAM</a></li>
+		<li><a href="#">FACEBOOK <i className="fa fa-facebook-official"></i></a></li>
+		<li><a href="#">TWITTER <i className="fa fa-twitter-square"></i></a></li>
+		<li><a href="#">LINKEDIN <i className="fa fa-linkedin-square"></i></a></li>
+		<li><a href="#">GOOGLE+ <i className="fa fa-google-plus-square"></i></a></li>
+		<li><a href="#">INSTAGRAM <i className="fa fa-instagram"></i></a></li>
 		</ul>
       </div>
     

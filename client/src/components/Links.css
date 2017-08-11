@@ -1,0 +1,51 @@
+.link-section {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.link-list {
+    border: 1px solid green;
+    width: 100vw;
+}
+.link-list ul{
+    list-style-type: none;
+    margin-top: 30px;
+    border: 1px solid red;
+    columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+.link-list li {
+    margin-top: 10px;
+}
+
+.link-list a {
+    color: #999;
+}
+.link-title {
+    padding: 20px;
+}
+@media screen and (min-width: 540px) {
+    .link-list {
+        width: 40%;
+    }
+}
+@media screen and (min-width: 744px) {
+    .link-list {
+        width: 30%;
+    }
+    .link-list ul {
+        columns: 1;
+  -webkit-columns: 1;
+  -moz-columns: 1;
+    }
+    .link-list li {
+        margin-top: 20px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .link-list {
+        width: 20%;
+    }
+}
