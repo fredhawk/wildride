@@ -4,6 +4,11 @@ mongoose.Promise = global.Promise;
 const validator = require('validator');
 
 const userSchema = new Schema({
+  name: {
+    type: String,
+    required: 'Please supply a name.',
+    trim: true
+  },
   email: {
     type: String,
     unique: true,
@@ -12,15 +17,9 @@ const userSchema = new Schema({
     validate: [validator.isEmail, 'Invalid email address'],
     required: 'Please supply an email address'
   },
-  firstname: {
+  password: {
     type: String,
-    required: 'Please supply a firstname',
-    trim: true
-  },
-  lastname: {
-    type: String,
-    required: 'Please supply a lastname',
-    trim: true
+    required: 'Please provide a password.'
   }
 });
 
