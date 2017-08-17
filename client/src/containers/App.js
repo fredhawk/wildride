@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 import Hero from '../components/Hero';
 import FeaturedJobs from '../components/FeaturedJobs';
-import ExploreJobs from '../containers/ExploreJobs';
-import Register from './Register';
-import { jobs } from '../models/data.json';
 import Links from '../components/Links';
+import ExploreJobs from './ExploreJobs';
+import Register from './Register';
+import PostJob from './PostJob';
+import { jobs } from '../models/data.json';
 
 class App extends Component {
   constructor(props) {
@@ -18,10 +19,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Hero />
+        {/* <Hero />
         <FeaturedJobs jobs={this.state.jobs} />
         <ExploreJobs jobs={this.state.jobs} />
-        <Links />
+        <Links /> */}
+        <PostJob />
       </div>
     );
   }
