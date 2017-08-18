@@ -4,8 +4,21 @@
 }
 
 .form {
+  /* max-width: 600px; */
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 auto;
+  max-width: 300px;
 }
 .form__label {
 }
 .form__input {
+  margin-bottom: 1em;
+  width: 100%;
+  background: #2569ba;
+  color: white;
+}
+
+.form__button {
+  border: none;
 }

@@ -32,7 +32,7 @@ class Register extends Component {
             Confirm Password
           </label>
           <input type="password" className="form__input Register__input" name="passwordconfirm" />
-          <input type="submit" className="Register__button" defaultValue="Sign up" />
+          <input type="submit" className="form__button Register__button" defaultValue="Sign up" />
         </form>
       </section>
     );

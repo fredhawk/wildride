@@ -37,7 +37,7 @@ class PostJob extends Component {
             Application deadline (days)
           </label>
           <input type="number" className="form__input PostJob__input" name="applytime" />
-          <input type="submit" defaultValue="Post job" />
+          <input type="submit" className="form__button" defaultValue="Post job" />
         </form>
       </section>
     );
