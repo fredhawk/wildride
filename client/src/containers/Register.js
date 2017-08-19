@@ -1,27 +1,25 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './Register.css';
 
 class Register extends Component {
   onSubmit(e) {
     e.preventDefault();
-    console.log(`Submitted`);
-    console.log(`event`, e.target.firstname.value);
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    const passwordConfirm = e.target.passwordconfirm.value;
+    axios.post('http://localhost:3030/register', { name, email, password, passwordConfirm }).then(response => console.log(response)).catch(err => console.error(err));
   }
   render() {
     return (
       <section className="Register">
         <h2 className="Register__title">Register</h2>
-
-        <form action="#" onSubmit={e => this.onSubmit(e)} className="Register__form">
-
-          <label htmlFor="firstname" className="Register__label">
-            First Name
+        <form onSubmit={e => this.onSubmit(e)} className="Register__form">
+          <label htmlFor="name" className="Register__label">
+            Name
           </label>
-          <input type="text" className="Register__input" name="firstname" />
-          <label htmlFor="lastname" className="Register__label">
-            Last Name
-          </label>
-          <input type="text" className="Register__input" name="lastname" />
+          <input type="text" className="Register__input" name="name" />
           <label htmlFor="email" className="Register__label">
             Email address
           </label>
@@ -30,6 +28,10 @@ class Register extends Component {
             Password
           </label>
           <input type="password" className="Register__input" name="password" />
+          <label htmlFor="passwordconfirm" className="Register__label">
+            Confirm Password
+          </label>
+          <input type="password" className="Register__input" name="passwordconfirm" />
           <input type="submit" className="Register__button" defaultValue="Sign up" />
         </form>
       </section>

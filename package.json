@@ -36,10 +36,18 @@
     "babel-core": "^6.25.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-es2016": "^6.24.1",
+    "body-parser": "^1.17.2",
     "browserslist": "^2.2.2",
+    "cors": "^2.8.4",
     "dotenv": "^4.0.0",
+    "es6-promisify": "^5.0.0",
     "express": "^4.15.3",
-    "mongoose": "^4.11.6"
+    "mongoose": "^4.11.6",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "passport-mongoose": "0.0.1",
+    "uuid": "^3.1.0",
+    "validator": "^8.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
