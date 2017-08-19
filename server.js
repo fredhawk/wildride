@@ -11,6 +11,7 @@ mongoose.connection.on('error', err => {
   console.error(`Error 🙅 🚫 🙅 🚫 🙅 🚫 🙅 🚫 →  ${err.message}`);
 });
 require('./models/User');
+require('./models/Job');
 
 const routes = require('./routes/index');
 const app = express();
@@ -25,15 +26,6 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use(`/`, routes);
-// app.options('/register', cors());
-// app.post('/register', cors(), (req, res) => {
-//   console.log(req.body);
-//   const name = req.body.name;
-//   const email = req.body.email;
-//   const password = req.body.password;
-//   console.log('Received post: %s %s %s', name, email, password);
-//   res.send('got it!');
-// });
 
 const server = app.listen(PORT, () => {
   console.log('Listening on port %d in %s mode', server.address().port, app.settings.env);
