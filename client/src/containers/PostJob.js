@@ -20,19 +20,19 @@ class PostJob extends Component {
           <label htmlFor="company" className="form__label PostJob__label">
             Company name
           </label>
-          <input type="text" className="form__input PostJob__input" name="company" />
+          <input type="text" className="form__input PostJob__input" name="company" placeholder="Ex. Fun factory" />
           <label htmlFor="jobtitle" className="form__label PostJob__label">
             Job Title
           </label>
-          <input type="text" className="form__input PostJob__input" name="jobtitle" />
+          <input type="text" className="form__input PostJob__input" name="jobtitle" placeholder="Ex. Data Analyst" />
           <label htmlFor="jobdescription" className=" form__label PostJob__label">
             Job Description
           </label>
-          <textarea className="form__input PostJob__input" name="jobdescription" />
+          <textarea className="form__input PostJob__input" name="jobdescription" placeholder="A description of what the job entails." />
           <label htmlFor="location" className="form__label PostJob__label">
             Location
           </label>
-          <input type="text" className="form__input PostJob__input" name="location" />
+          <input type="text" className="form__input PostJob__input" name="location" placeholder="Ex. Berlin, Germany" />
           <label htmlFor="applytime" className="form__label PostJob__label">
             Application deadline (days)
           </label>
