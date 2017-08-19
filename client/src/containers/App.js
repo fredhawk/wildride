@@ -7,7 +7,7 @@ import ExploreJobs from './ExploreJobs';
 import Register from './Register';
 import PostJob from './PostJob';
 import { jobs } from '../models/data.json';
-import Links from '../components/Links'
+
 
 class App extends Component {
   constructor(props) {
