@@ -11,7 +11,9 @@ class Register extends Component {
     return (
       <section className="Register">
         <h2 className="Register__title">Register</h2>
+
         <form action="#" onSubmit={e => this.onSubmit(e)} className="Register__form">
+
           <label htmlFor="firstname" className="Register__label">
             First Name
           </label>
