@@ -4,21 +4,31 @@
 }
 
 .form {
-  /* max-width: 600px; */
   display: flex;
   flex-flow: column nowrap;
   margin: 0 auto;
   max-width: 300px;
 }
 .form__label {
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
 }
 .form__input {
   margin-bottom: 1em;
-  width: 100%;
-  background: #2569ba;
-  color: white;
+  border: 1px solid #234976;
+  padding: 0.5em;
+  border-radius: 3px;
+  font-size: 1.4em;
+}
+
+textarea.form__input {
+  resize: none;
+  height: 150px;
 }
 
 .form__button {
+  background: #2569ba;
+  color: white;
   border: none;
+  padding: 1em;
 }
