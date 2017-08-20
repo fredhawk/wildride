@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from '../components/Header';
 import Hero from '../components/Hero';
 import FeaturedJobs from '../components/FeaturedJobs';
 import Links from '../components/Links';
@@ -19,6 +20,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header />
         <Hero />
         <FeaturedJobs jobs={this.state.jobs} />
         <ExploreJobs jobs={this.state.jobs} />
