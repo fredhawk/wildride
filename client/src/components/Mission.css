@@ -2,6 +2,7 @@
     background-color: #1c75bc;
     color: white;
     text-align: left;
+    font-family: sans-serif;
 }
 .Mission-wrapper {
     background-image: url(https://jobbatical.com/dist/ff1173d35e5ee34741b361181d8109a1.svg);
@@ -24,4 +25,13 @@
     cursor: pointer;
     margin-top: 35px;
     margin-bottom: 35px;
+}
+.Mission-title {
+    font-weight: 700;
+    margin-bottom: 15%;
+    font-size: 1.3em;
+}
+.Mission-statement {
+    font-size: 16px;
+    line-height: 32px;
 }
