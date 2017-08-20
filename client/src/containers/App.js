@@ -8,6 +8,7 @@ import Register from './Register';
 import PostJob from './PostJob';
 import { jobs } from '../models/data.json';
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -20,10 +21,10 @@ class App extends Component {
     return (
       <div className="App">
         <Register />
-        {/* <Hero />
+        <Hero />
         <FeaturedJobs jobs={this.state.jobs} />
         <ExploreJobs jobs={this.state.jobs} />
-        <Links /> */}
+        <Links />
         <PostJob />
       </div>
     );
