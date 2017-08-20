@@ -1,0 +1,22 @@
+.Header {
+  height: 75px;
+}
+
+.nav {
+  /* max-width: 500px; */
+}
+.nav__list {
+  display: flex;
+  flex-flow: row wrap;
+  background: red;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  flex: 1 0 250px;
+  display: block;
+  list-style-type: none;
+  background: green;
+  /* padding: 0; */
+}
