@@ -22,7 +22,7 @@ class ExploreJobs extends Component {
   }
   render() {
     return (
-      <section className=".ExploreJobs">
+      <section className="ExploreJobs">
         <h1 className="ExploreJobs-title">Explore Jobs</h1>
         <Search getSearch={value => this.getMatches(value)} />
         <JobList jobs={!this.state.searchResult ? this.props.jobs : this.state.searchResult} />
