@@ -1,0 +1,13 @@
+.Mission {
+    background-color: #1c75bc;
+    color: white;
+    text-align: left;
+}
+.Mission-container {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    padding-left: 10%;
+    background-image: url(https://jobbatical.com/dist/ff1173d35e5ee34741b361181d8109a1.svg);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+}
