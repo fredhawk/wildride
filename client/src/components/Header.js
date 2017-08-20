@@ -4,7 +4,7 @@ import './Header.css';
 
 const Header = () => {
   return (
-    <section className=".Header">
+    <section className="Header">
       <nav className="nav">
         <ul className="nav__list">
           <li className="nav__item">

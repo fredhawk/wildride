@@ -1,14 +1,13 @@
 .Header {
-  height: 75px;
+  width: 100%;
+  background: #1c75bc;
 }
 
 .nav {
-  /* max-width: 500px; */
 }
 .nav__list {
   display: flex;
   flex-flow: row wrap;
-  background: red;
   padding: 0;
   margin: 0;
 }
@@ -17,6 +16,14 @@
   flex: 1 0 250px;
   display: block;
   list-style-type: none;
-  background: green;
-  /* padding: 0; */
+  margin: 0 auto;
+  padding: 1.5em;
+  font-size: 1.2em;
+}
+.nav__item a {
+  color: white;
+}
+.nav__item:hover {
+  background: #135589;
+  cursor: pointer;
 }
