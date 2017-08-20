@@ -7,6 +7,7 @@ import ExploreJobs from './ExploreJobs';
 import Register from './Register';
 import PostJob from './PostJob';
 import { jobs } from '../models/data.json';
+import Mission from '../components/Mission';
 
 
 class App extends Component {
@@ -20,14 +21,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+	  
         <Register />
         <Hero />
         <FeaturedJobs jobs={this.state.jobs} />
-        <ExploreJobs jobs={this.state.jobs} />
+		<ExploreJobs jobs={this.state.jobs} /> 
+		<Mission />
         <Links />
         <PostJob />
       </div>
-    );
+	  );
   }
 }
 
