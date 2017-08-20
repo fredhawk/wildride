@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
@@ -9,9 +10,12 @@ const Hero = () => {
           <h1 className="Hero-title">Travel. Work.</h1>
           <h2 className="Hero-title__see-world">See the world</h2>
           <div className="Hero-navigation">
-            <a href="#" className="Hero-btn Hero-btn-explore">
+            {/* <a href="#" className="Hero-btn Hero-btn-explore">
               Explore all jobs
-            </a>
+            </a> */}
+            <Link to="/findjob" className="Hero-btn Hero-btn-explore">
+              Explore all jobs
+            </Link>
             <a href="#" className="Hero-btn Hero-btn-employer">
               Hiring ? Start here
             </a>

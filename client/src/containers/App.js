@@ -1,35 +1,36 @@
-import React, { Component } from 'react';
+import React from 'react';
+// import React, { Component } from 'react';
 import './App.css';
 import Header from '../components/Header';
-import Hero from '../components/Hero';
-import FeaturedJobs from '../components/FeaturedJobs';
+import Main from '../components/Main';
 import Links from '../components/Links';
-import ExploreJobs from './ExploreJobs';
-import Register from './Register';
-import PostJob from './PostJob';
-import { jobs } from '../models/data.json';
+// import { jobs } from '../models/data.json';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      jobs
-    };
-  }
+// class App extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       jobs
+//     };
+//   }
 
-  render() {
-    return (
-      <div className="App">
-        <Header />
-        <Hero />
-        <FeaturedJobs jobs={this.state.jobs} />
-        <ExploreJobs jobs={this.state.jobs} />
-        <Register />
-        <PostJob />
-        <Links />
-      </div>
-    );
-  }
-}
+//   render() {
+//     return (
+
+//     );
+//   }
+// }
+
+// export default App;
+
+const App = () => {
+  return (
+    <div className="App">
+      <Header />
+      <Main />
+      <Links />
+    </div>
+  );
+};
 
 export default App;
