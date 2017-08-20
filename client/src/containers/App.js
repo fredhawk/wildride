@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
+// import React, { Component } from 'react';
 import './App.css';
-import Hero from '../components/Hero';
-import FeaturedJobs from '../components/FeaturedJobs';
+import Header from '../components/Header';
+import Main from '../components/Main';
 import Links from '../components/Links';
+<<<<<<< HEAD
 import ExploreJobs from './ExploreJobs';
 import Register from './Register';
 import PostJob from './PostJob';
@@ -33,5 +35,17 @@ class App extends Component {
 	  );
   }
 }
+=======
+
+const App = () => {
+  return (
+    <div className="App">
+      <Header />
+      <Main />
+      <Links />
+    </div>
+  );
+};
+>>>>>>> feature/navigation
 
 export default App;

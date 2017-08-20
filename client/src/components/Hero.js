@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
@@ -9,12 +10,12 @@ const Hero = () => {
           <h1 className="Hero-title">Travel. Work.</h1>
           <h2 className="Hero-title__see-world">See the world</h2>
           <div className="Hero-navigation">
-            <a href="#" className="Hero-btn Hero-btn-explore">
+            <Link to="/find-job" className="Hero-btn Hero-btn-explore">
               Explore all jobs
-            </a>
-            <a href="#" className="Hero-btn Hero-btn-employer">
-              Hiring ? Start here
-            </a>
+            </Link>
+            <Link to="/post-job" className="Hero-btn Hero-btn-explore">
+              Post a job
+            </Link>
           </div>
           <div className="Hero-tagline">Use Jobbatical to fin a tech, business or creative job abroad.</div>
         </div>
