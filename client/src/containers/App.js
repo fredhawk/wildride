@@ -21,11 +21,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-	  {/*
+	  
         <Register />
         <Hero />
         <FeaturedJobs jobs={this.state.jobs} />
-	  <ExploreJobs jobs={this.state.jobs} /> */}
+		<ExploreJobs jobs={this.state.jobs} /> 
 		<Mission />
         <Links />
         <PostJob />
