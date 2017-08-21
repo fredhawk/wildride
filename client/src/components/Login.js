@@ -1,10 +1,12 @@
 import React from 'react';
+import axios from 'axios';
 
 function handleSubmit(e) {
   e.preventDefault();
   const email = e.target.email.value;
   const password = e.target.password.value;
   console.log({ email, password });
+  axios.post('http://localhost:3030/login', { email, password }).then(() => this.props.history.push('/')).catch(err => console.error(err));
 }
 const Login = () => {
   return (
