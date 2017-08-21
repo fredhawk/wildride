@@ -4,7 +4,7 @@ import Home from './Home';
 import Register from '../containers/Register';
 import ExploreJobs from '../containers/ExploreJobs';
 import PostJob from '../containers/PostJob';
-import Login from './Login';
+import Login from '../containers/Login';
 
 const Main = props => {
   return (
