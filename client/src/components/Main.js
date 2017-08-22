@@ -4,6 +4,7 @@ import Home from './Home';
 import Register from '../containers/Register';
 import ExploreJobs from '../containers/ExploreJobs';
 import PostJob from '../containers/PostJob';
+import Login from '../containers/Login';
 
 const Main = props => {
   return (
@@ -13,6 +14,7 @@ const Main = props => {
         <Route path="/post-job" component={PostJob} />
         <Route path="/register" component={Register} />
         <Route path="/find-job" component={ExploreJobs} />
+        <Route path="/login" component={Login} />
       </Switch>
     </main>
   );
