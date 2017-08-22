@@ -15,24 +15,24 @@ class Register extends Component {
     return (
       <section className="Register">
         <h2 className="Register__title">Register</h2>
-        <form onSubmit={e => this.onSubmit(e)} className="Register__form">
-          <label htmlFor="name" className="Register__label">
+        <form onSubmit={e => this.onSubmit(e)} className="form Register__form">
+          <label htmlFor="name" className="form__label Register__label">
             Name
           </label>
-          <input type="text" className="Register__input" name="name" />
-          <label htmlFor="email" className="Register__label">
+          <input type="text" className="form__input Register__input" name="name" placeholder="Ex. John Doe" />
+          <label htmlFor="email" className="form__label Register__label">
             Email address
           </label>
-          <input type="email" className="Register__input" name="email" />
-          <label htmlFor="password" className="Register__label">
+          <input type="email" className="form__input Register__input" name="email" placeholder="Ex. one@example.com" />
+          <label htmlFor="password" className="form__label Register__label">
             Password
           </label>
-          <input type="password" className="Register__input" name="password" />
-          <label htmlFor="passwordconfirm" className="Register__label">
+          <input type="password" className="form__input Register__input" name="password" placeholder="Please choose a password wisely." />
+          <label htmlFor="passwordconfirm" className="form__label Register__label">
             Confirm Password
           </label>
-          <input type="password" className="Register__input" name="passwordconfirm" />
-          <input type="submit" className="Register__button" defaultValue="Sign up" />
+          <input type="password" className="form__input Register__input" name="passwordconfirm" placeholder="Please confirm your password" />
+          <input type="submit" className="form__button Register__button" defaultValue="Sign up" />
         </form>
       </section>
     );
