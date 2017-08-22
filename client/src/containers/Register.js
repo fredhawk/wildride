@@ -9,12 +9,13 @@ class Register extends Component {
     const email = e.target.email.value;
     const password = e.target.password.value;
     const passwordConfirm = e.target.passwordconfirm.value;
-    axios.post('http://localhost:3030/register', { name, email, password, passwordConfirm }).then(response => console.log(response)).catch(err => console.error(err));
+    axios.post('http://localhost:3030/register', { name, email, password, passwordConfirm }).then(this.props.history.push('/')).catch(err => console.error(err));
   }
   render() {
     return (
       <section className="Register">
-        <h2 className="Register__title">Register</h2>
+        <h2 className="Register__title">Sign Up</h2>
+
         <form onSubmit={e => this.onSubmit(e)} className="form Register__form">
           <label htmlFor="name" className="form__label Register__label">
             Name

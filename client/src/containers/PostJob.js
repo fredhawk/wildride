@@ -9,8 +9,7 @@ class PostJob extends Component {
     const jobDescription = e.target.jobdescription.value;
     const location = e.target.location.value;
     const applyTime = e.target.applytime.value;
-    axios.post('http://localhost:3030/postjob', { company, jobTitle, jobDescription, location, applyTime }).then(response => console.log(response)).catch(err => console.error(err));
-    // console.log({ company, jobTitle, jobDescription, location, applyTime });
+    axios.post('http://localhost:3030/postjob', { company, jobTitle, jobDescription, location, applyTime }).then(() => this.props.history.push('/')).catch(err => console.error(err));
   }
   render() {
     return (
