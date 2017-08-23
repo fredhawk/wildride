@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const passport = require('passport');
 
 mongoose.connect(process.env.DATABASE, {
   useMongoClient: true
@@ -12,6 +13,7 @@ mongoose.connection.on('error', err => {
 });
 require('./models/User');
 require('./models/Job');
+require('./handlers/passport');
 
 const routes = require('./routes/index');
 const app = express();
