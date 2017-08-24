@@ -7,11 +7,12 @@ const User = mongoose.model('User');
 //   console.log(req.body);
 //   res.json(req.body);
 // };
-exports.login = passport.authenticate('local', {
+exports.login = passport.authenticate('local', () => {
   // failureRedirect: '/login',
-  failureFlash: 'Failed login!',
+  // failureFlash: 'Failed login!',
   // successRedirect: '/',
-  successFlash: 'You are now logged in!'
+  // successFlash: 'You are now logged in!'
+  console.log('yay login');
 });
 
 exports.logout = (req, res) => {
