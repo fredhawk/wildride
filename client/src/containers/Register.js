@@ -13,7 +13,9 @@ class Register extends Component {
       .post('http://localhost:3030/register', { name, email, password, passwordConfirm })
       .then(response => {
         // call a function that changes the header
-        this.props.history.push('/');
+        this.props.handleUserInfo(response.data);
+        // This should route to profile later
+        this.props.forRoute.history.push('/');
       })
       .catch(err => {
         // Something went wrong with the registration

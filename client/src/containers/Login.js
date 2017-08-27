@@ -11,6 +11,7 @@ class Login extends Component {
       .then(response => {
         // call a function that changes the header
         this.props.handleUserInfo(response.data);
+        // This should route to profile later
         this.props.forRoute.history.push('/');
       })
       .catch(err => {
