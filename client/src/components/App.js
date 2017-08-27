@@ -8,20 +8,20 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoggedIn: false
+      user: null
     };
   }
 
-  toggleLoggedIn() {
+  handleUserInfo(userInfo) {
     this.setState({
-      isLoggedIn: !this.isLoggedIn
+      user: userInfo
     });
   }
   render() {
     return (
       <div className="App">
-        <Header isLoggedIn={this.state.isLoggedIn} />
-        <Main toggleLoggedIn={() => this.toggleLoggedIn()} />
+        <Header user={this.state.user} />
+        <Main handleUserInfo={info => this.handleUserInfo(info)} />
         <Links />
       </div>
     );

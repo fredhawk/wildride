@@ -2,6 +2,10 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 
+// If isLoggedIn === true header should show the name of the user and a log out button
+
+// If isLoggedIn === false header shows signup and sign in links
+
 const Header = () => {
   return (
     <section className="Header">
