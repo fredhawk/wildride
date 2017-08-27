@@ -6,7 +6,19 @@ class Login extends Component {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    axios.post('http://localhost:3030/login', { email, password }).then(this.props.history.push('/')).catch(err => console.error(err));
+    axios
+      .post('http://localhost:3030/login', { email, password })
+      .then(response => {
+        console.log(response.data.isLoggedIn);
+        if (response.data.isLoggedIn === true) {
+          // call a function that changes the header
+          this.props.history.push('/');
+          return;
+        }
+        // send person to login screen as login failed.
+        this.props.history.push('/login');
+      })
+      .catch(err => console.error(err));
   }
   render() {
     return (
@@ -16,11 +28,11 @@ class Login extends Component {
           <label className="form__label" htmlFor="email">
             Email
           </label>
-          <input type="email" className="form__input" name="email" />
+          <input type="email" className="form__input" name="email" required />
           <label className="form__label" htmlFor="password">
             Password
           </label>
-          <input type="password" className="form__input" name="password" />
+          <input type="password" className="form__input" name="password" required />
           <input type="submit" className="form__button" defaultValue="Log in" />
         </form>
       </section>

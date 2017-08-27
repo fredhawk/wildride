@@ -16,6 +16,7 @@ class Register extends Component {
         if (response.data.isLoggedIn === true) {
           // call a function that changes the header
           this.props.history.push('/');
+          return;
         }
         // send person to login screen as login failed.
         this.props.history.push('/login');
