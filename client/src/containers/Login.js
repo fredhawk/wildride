@@ -10,15 +10,17 @@ class Login extends Component {
       .post('http://localhost:3030/login', { email, password })
       .then(response => {
         // call a function that changes the header
-        this.props.history.push('/');
+        this.props.toggleLoggedIn();
+        this.props.forRoute.history.push('/');
       })
       .catch(err => {
         // send person to login screen as login failed.
-        this.props.history.push('/login');
+        // this.props.history.push('/login');
         // console.error(err)
       });
   }
   render() {
+    console.log(this.props.toggleLoggedIn);
     return (
       <section className="Login">
         <h1 className="Login__title">Login</h1>

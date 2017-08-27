@@ -14,7 +14,8 @@ const Main = props => {
         <Route path="/post-job" component={PostJob} />
         <Route path="/register" component={Register} />
         <Route path="/find-job" component={ExploreJobs} />
-        <Route path="/login" component={Login} />
+        {/* <Route path="/login" component={Login} /> */}
+        <Route path="/login" render={routeProps => <Login {...props} forRoute={routeProps} />} />
       </Switch>
     </main>
   );
