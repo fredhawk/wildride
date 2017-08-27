@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const passport = require('passport');
+const promisify = require('es6-promisify');
+const expressValidator = require('express-validator');
 
 mongoose.connect(process.env.DATABASE, {
   useMongoClient: true
@@ -19,13 +21,25 @@ const routes = require('./routes/index');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
     extended: true
   })
 );
-app.use(bodyParser.json());
+app.use(expressValidator());
+
 app.use(cors());
+
+// // Passport JS is what we use to handle our logins
+app.use(passport.initialize());
+app.use(passport.session());
+
+// promisify some callback based APIs
+app.use((req, res, next) => {
+  req.login = promisify(req.login, req);
+  next();
+});
 
 app.use(`/`, routes);
 

@@ -1,19 +1,26 @@
 const passport = require('passport');
 const mongoose = require('mongoose');
 const User = mongoose.model('User');
+const promisify = require('es6-promisify');
 
-// exports.login = async (req, res, next) => {
-//   // need to do authentication here
-//   console.log(req.body);
-//   res.json(req.body);
-// };
-exports.login = passport.authenticate('local', () => {
-  // failureRedirect: '/login',
-  // failureFlash: 'Failed login!',
-  // successRedirect: '/',
-  // successFlash: 'You are now logged in!'
-  console.log('yay login');
-});
+exports.login = (req, res) => {
+  // console.log(`req`, req);
+  // console.log(`res`, res);
+  passport.authenticate('local')(req, res, () => {
+    // console.log(`err`, err);
+    // console.log(`user`, user);
+    // console.log(`info`, info);
+    // failureRedirect: '/login',
+    // failureFlash: 'Failed login!',
+    // successRedirect: '/:3000'
+    // successFlash: 'You are now logged in!'
+    res.json({ isLoggedIn: true });
+    // console.log(`req`, req.body);
+    // console.log(`res`, res.body);
+    // console.log('yay login');
+    // res.redirect('/');
+  });
+};
 
 exports.logout = (req, res) => {
   req.logout();
