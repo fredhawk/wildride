@@ -1,9 +1,7 @@
-// import React from 'react';
+import React, { Component } from 'react';
 import Hero from './Hero';
 import FeaturedJobs from './FeaturedJobs';
 import { jobs } from '../models/data.json';
-
-import React, { Component } from 'react';
 
 class Home extends Component {
   constructor(props) {
@@ -23,11 +21,3 @@ class Home extends Component {
 }
 
 export default Home;
-
-// const Home = props => {
-//   return (
-
-//   );
-// };
-
-// export default Home;
