@@ -11,7 +11,7 @@ class App extends Component {
       user: null
     };
   }
-
+  // Need to write a function that removes userInfo on log out
   handleUserInfo(userInfo) {
     this.setState({
       user: userInfo

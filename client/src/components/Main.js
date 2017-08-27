@@ -15,6 +15,7 @@ const Main = props => {
         <Route path="/register" render={routeProps => <Register {...props} forRoute={routeProps} />} />
         <Route path="/find-job" component={ExploreJobs} />
         <Route path="/login" render={routeProps => <Login {...props} forRoute={routeProps} />} />
+        <Route path="/logout" component={Home} />
       </Switch>
     </main>
   );
