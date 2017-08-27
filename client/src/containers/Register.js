@@ -12,14 +12,8 @@ class Register extends Component {
     axios
       .post('http://localhost:3030/register', { name, email, password, passwordConfirm })
       .then(response => {
-        console.log(response.data.isLoggedIn);
-        if (response.data.isLoggedIn === true) {
-          // call a function that changes the header
-          this.props.history.push('/');
-          return;
-        }
-        // send person to login screen as login failed.
-        this.props.history.push('/login');
+        // call a function that changes the header
+        this.props.history.push('/');
       })
       .catch(err => {
         // Something went wrong with the registration
