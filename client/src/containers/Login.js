@@ -9,16 +9,14 @@ class Login extends Component {
     axios
       .post('http://localhost:3030/login', { email, password })
       .then(response => {
-        console.log(response.data.isLoggedIn);
-        if (response.data.isLoggedIn === true) {
-          // call a function that changes the header
-          this.props.history.push('/');
-          return;
-        }
+        // call a function that changes the header
+        this.props.history.push('/');
+      })
+      .catch(err => {
         // send person to login screen as login failed.
         this.props.history.push('/login');
-      })
-      .catch(err => console.error(err));
+        // console.error(err)
+      });
   }
   render() {
     return (
