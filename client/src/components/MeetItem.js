@@ -2,10 +2,9 @@ import React from 'react';
 import './MeetItem.css';
 
 const MeetItem = props => {
-  const { about, location, date, time, food, deadline } = props.meet;
+  const { about, location, date, time, food, deadline, save } = props.meet;
   return (
     <div className="MeetItem">
-      Date
       <picture className="MeetItem__picture">
         <img src="https://unsplash.it/600/400/?random" alt="random" className="MeetItem__img" />
       </picture>
@@ -22,6 +21,9 @@ const MeetItem = props => {
           </p>
           <p className="MeetItem__datetime">
             {time}
+          </p>
+          <p className="MeetItem__datetime">
+            Will food be served? {food ? 'Yes' : 'No'}
           </p>
         </div>
         <footer className="MeetItem__footer">

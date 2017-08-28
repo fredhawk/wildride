@@ -43,8 +43,8 @@
 .MeetItem__datetime {
   font-size: 0.9em;
   font-weight: 300;
-  height: 0;
-  overflow: hidden;
+  /* height: 50px; */
+  /* overflow: hidden; */
   transition: opacity .4s linear;
 }
 

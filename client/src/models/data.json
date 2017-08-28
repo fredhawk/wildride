@@ -1,11 +1,12 @@
 {
-  "jobs": [
+  "meets": [
     {
       "id": 1,
       "about": "Data procession specialist",
       "location": "Studyportals, Bucharest, Romania",
       "date": "2017-05-13",
       "time": "08.00",
+      "food": true,
       "deadline": 12,
       "save": false
     },
@@ -15,6 +16,7 @@
       "location": "Mindvalley, Kuala Lumpur, Malaysia",
       "date": "2017-05-13",
       "time": "08.00",
+      "food": true,
       "deadline": 60,
       "save": true
     },
@@ -24,6 +26,7 @@
       "location": "Studyportals, Eindhoven, Netherlands",
       "date": "2017-05-13",
       "time": "08.00",
+      "food": true,
       "deadline": 40,
       "save": false
     },
@@ -33,6 +36,7 @@
       "location": "Piktochart, Malaysia",
       "date": "2017-05-13",
       "time": "08.00",
+      "food": true,
       "deadline": 25,
       "save": false
     },
@@ -42,6 +46,7 @@
       "location": "Snapshot, Berlin, Germany",
       "date": "2017-05-13",
       "time": "08.00",
+      "food": true,
       "deadline": 8,
       "save": true
     },
@@ -51,6 +56,7 @@
       "location": "RBLD, Madrid, Spain",
       "date": "2017-05-13",
       "time": "08.00",
+      "food": true,
       "deadline": 70,
       "save": true
     },
@@ -60,6 +66,7 @@
       "location": "Piktochart, Malaysia",
       "date": "2017-05-13",
       "time": "08.00",
+      "food": true,
       "deadline": 37,
       "save": true
     },
@@ -69,6 +76,7 @@
       "location": "Mindvalley, Kuala Lumpur, Malaysia",
       "date": "2017-05-13",
       "time": "08.00",
+      "food": true,
       "deadline": 18,
       "save": false
     },
@@ -78,6 +86,7 @@
       "location": "Studyportals, Eindhoven, Netherlands",
       "date": "2017-05-13",
       "time": "08.00",
+      "food": true,
       "deadline": 89,
       "save": false
     },
@@ -87,6 +96,7 @@
       "location": "OKHI, Nairobi, Kenya",
       "date": "2017-05-13",
       "time": "08.00",
+      "food": true,
       "deadline": 5,
       "save": false
     }
