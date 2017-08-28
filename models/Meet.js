@@ -12,6 +12,10 @@ const meetSchema = new Schema({
     type: String,
     required: 'The meet needs a location.'
   },
+  date: {
+    type: Date,
+    required: 'Please provide a date for the meet.'
+  },
   time: {
     type: Date,
     required: 'Please provide a time for the meet.'

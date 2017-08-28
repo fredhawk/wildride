@@ -1,29 +1,29 @@
-.ExploreJobs {
+.ExploreMeets {
 }
 
-.ExploreJobs-title {
+.ExploreMeets-title {
   font-size: 3.5em;
   font-weight: 700;
   line-height: 2em;
 }
 
-.ExploreJobs-search-group {
+.ExploreMeets-search-group {
 }
 
-.ExploreJobs-search__input {
+.ExploreMeets-search__input {
 }
 
-.ExploreJobs-search__btn {
+.ExploreMeets-search__btn {
 }
 
-.ExploreJobs-matches {
+.ExploreMeets-matches {
   position: relative;
   font-size: 1.2em;
   font-weight: 300;
   margin-bottom: 3em;
 }
 
-.ExploreJobs-matches::before {
+.ExploreMeets-matches::before {
   border-top: 1px solid #ccc;
   content: "";
   z-index: -1;
@@ -36,7 +36,7 @@
   margin: 0 auto;
 }
 
-.ExploreJobs-matches span {
+.ExploreMeets-matches span {
   background: white;
   padding: 0 15px;
 }
