@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import './Profile.css';
 
 const Profile = props => {
     return (
-        <Header />
-        <div class="profile-container">
+        <div className="profile-container">
             <h2 id="profile-name">Profile Name</h2>
-            <div class="profile-info">
-                <div class="data-pair">
-                    <h4>e-Mail</h4>
+            <div className="profile-info">
+                <div className="data-pair">
+                    <h4>e-Mail:</h4>
                     <p>example@email.com</p>
                 </div>
             </div>
         </div>
     );
 }
+
+export default Profile;

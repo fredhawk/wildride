@@ -5,6 +5,7 @@ import Register from '../containers/Register';
 import ExploreJobs from '../containers/ExploreJobs';
 import PostJob from '../containers/PostJob';
 import Login from '../containers/Login';
+import Profile from './Profile';
 
 const Main = props => {
   return (

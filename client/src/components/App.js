@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header';
 import Main from './Main';
 import Links from './Links';
+import Profile from './Profile';
 
 class App extends Component {
   constructor(props) {
@@ -21,8 +22,10 @@ class App extends Component {
     return (
       <div className="App">
         <Header user={this.state.user} />
+        <Profile /> {/*}
         <Main handleUserInfo={info => this.handleUserInfo(info)} />
-        <Links />
+        <Links /> {*/}
+        
       </div>
     );
   }

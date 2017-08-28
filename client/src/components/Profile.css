@@ -1,0 +1,15 @@
+.profile-container {
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+#profile-name {
+    
+}
+.profile-info {
+    border: 1px solid #1c75bc;
+    padding: 0 10px 10px 10px;
+}
+.profile-info h4 {
+    margin-bottom: 0;
+}
