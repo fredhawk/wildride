@@ -13,7 +13,7 @@ const Hero = () => {
             <Link to="/find-job" className="Hero-btn Hero-btn-explore">
               Explore all jobs
             </Link>
-            <Link to="/post-job" className="Hero-btn Hero-btn-explore">
+            <Link to="/post-meet" className="Hero-btn Hero-btn-explore">
               Post a job
             </Link>
           </div>

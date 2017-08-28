@@ -14,7 +14,7 @@ mongoose.connection.on('error', err => {
   console.error(`Error 🙅 🚫 🙅 🚫 🙅 🚫 🙅 🚫 →  ${err.message}`);
 });
 require('./models/User');
-require('./models/Job');
+require('./models/Meet');
 require('./handlers/passport');
 
 const routes = require('./routes/index');
