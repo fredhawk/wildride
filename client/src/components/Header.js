@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = props => {
+  console.log(props);
   if (props.user !== null) {
     return (
       <section className="Header">
@@ -18,7 +19,9 @@ const Header = props => {
               </NavLink>
             </li>
             <li className="nav__item">
-              <NavLink to="/logout">Log Out</NavLink>
+              <NavLink to="/" onClick={() => props.logout()}>
+                Log Out
+              </NavLink>
             </li>
           </ul>
         </nav>
