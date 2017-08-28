@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import MeetList from '../components/MeetList';
 import Search from './Search';
-import './ExploreMeets.css';
+import './Explore.css';
 import { meets } from '../models/data.json';
 
-class ExploreMeets extends Component {
+class Explore extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,7 +15,7 @@ class ExploreMeets extends Component {
 
   getMatches(searchterm) {
     const searchValue = new RegExp(searchterm, 'i');
-    const matches = meets.filter(met => met.about.match(searchValue) || met.location.match(searchValue));
+    const matches = meets.filter(meet => meet.about.match(searchValue) || meet.location.match(searchValue));
     this.setState({
       searchResult: matches,
       totalMatches: matches.length
@@ -23,11 +23,11 @@ class ExploreMeets extends Component {
   }
   render() {
     return (
-      <section className="ExploreMeets">
-        <h1 className="ExploreMeets-title">Explore Jobs</h1>
+      <section className="Explore">
+        <h1 className="Explore-title">Explore Meets</h1>
         <Search getSearch={value => this.getMatches(value)} />
         <MeetList meets={!this.state.searchResult ? meets : this.state.searchResult} />
-        <div className="ExploreMeets-matches">
+        <div className="Explore-matches">
           <span>
             Found {this.state.totalMatches} matches
           </span>
@@ -37,4 +37,4 @@ class ExploreMeets extends Component {
   }
 }
 
-export default ExploreMeets;
+export default Explore;

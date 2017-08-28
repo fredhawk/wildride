@@ -2,82 +2,92 @@
   "jobs": [
     {
       "id": 1,
-      "title": "Data procession specialist",
+      "about": "Data procession specialist",
       "location": "Studyportals, Bucharest, Romania",
-      "description": "Fun fact for you data lovers out there",
-      "apply": 12,
+      "date": "2017-05-13",
+      "time": "08.00",
+      "deadline": 12,
       "save": false
     },
     {
       "id": 2,
-      "title": "Advertising specialist",
+      "about": "Advertising specialist",
       "location": "Mindvalley, Kuala Lumpur, Malaysia",
-      "description": "Mindvalley is looking for an advertising specialist to run their digital campaigns.",
-      "apply": 60,
+      "date": "2017-05-13",
+      "time": "08.00",
+      "deadline": 60,
       "save": true
     },
     {
       "id": 3,
-      "title": "Account manager (continental Europe)",
+      "about": "Account manager (continental Europe)",
       "location": "Studyportals, Eindhoven, Netherlands",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, eaque.",
-      "apply": 40,
+      "date": "2017-05-13",
+      "time": "08.00",
+      "deadline": 40,
       "save": false
     },
     {
       "id": 4,
-      "title": "Designer",
+      "about": "Designer",
       "location": "Piktochart, Malaysia",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, illo.",
-      "apply": 25,
+      "date": "2017-05-13",
+      "time": "08.00",
+      "deadline": 25,
       "save": false
     },
     {
       "id": 5,
-      "title": "Account development manager",
+      "about": "Account development manager",
       "location": "Snapshot, Berlin, Germany",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, laudantium.",
-      "apply": 8,
+      "date": "2017-05-13",
+      "time": "08.00",
+      "deadline": 8,
       "save": true
     },
     {
       "id": 6,
-      "title": "Full stack Engineer",
+      "about": "Full stack Engineer",
       "location": "RBLD, Madrid, Spain",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, illo!",
-      "apply": 70,
+      "date": "2017-05-13",
+      "time": "08.00",
+      "deadline": 70,
       "save": true
     },
     {
       "id": 7,
-      "title": "UX Researcher",
+      "about": "UX Researcher",
       "location": "Piktochart, Malaysia",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, nemo?",
-      "apply": 37,
+      "date": "2017-05-13",
+      "time": "08.00",
+      "deadline": 37,
       "save": true
     },
     {
       "id": 8,
-      "title": "Customer support engineer",
+      "about": "Customer support engineer",
       "location": "Mindvalley, Kuala Lumpur, Malaysia",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, illo!",
-      "apply": 18,
+      "date": "2017-05-13",
+      "time": "08.00",
+      "deadline": 18,
       "save": false
     },
     {
       "id": 9,
-      "title": "Back-end developer",
+      "about": "Back-end developer",
       "location": "Studyportals, Eindhoven, Netherlands",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam.",
-      "apply": 89,
+      "date": "2017-05-13",
+      "time": "08.00",
+      "deadline": 89,
       "save": false
     },
     {
       "id": 10,
-      "title": "React Native Developer",
+      "about": "React Native Developer",
       "location": "OKHI, Nairobi, Kenya",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, aperiam veniam.",
-      "apply": 5,
+      "date": "2017-05-13",
+      "time": "08.00",
+      "deadline": 5,
       "save": false
     }
   ]

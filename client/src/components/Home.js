@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import Hero from './Hero';
-import FeaturedJobs from './FeaturedJobs';
-import { jobs } from '../models/data.json';
+import Featured from './Featured';
+import { meets } from '../models/data.json';
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      jobs
+      meets
     };
   }
   render() {
     return (
       <main>
         <Hero />
-        <FeaturedJobs jobs={this.state.jobs} />
+        <Featured meets={this.state.meets} />
       </main>
     );
   }
