@@ -40,3 +40,7 @@ textarea.form__input {
   border: none;
   padding: 1em;
 }
+
+/* input[type="radio"] {
+  display: inline;
+} */
