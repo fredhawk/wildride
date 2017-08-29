@@ -3,13 +3,19 @@
     padding-left: 10%;
     padding-right: 10%;
 }
-#profile-name {
-    
-}
 .profile-info {
     border: 1px solid #1c75bc;
     padding: 0 10px 10px 10px;
 }
 .profile-info h4 {
     margin-bottom: 0;
+}
+.data-pair {
+    position: relative;
+}
+.fa-pencil-square-o {
+    margin-left: 15px;
+}
+.fa-pencil-square-o:hover {
+    cursor: pointer;
 }
