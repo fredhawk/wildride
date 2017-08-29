@@ -8,8 +8,8 @@ exports.postMeet = async (req, res, next) => {
 };
 
 exports.getMeets = async (req, res) => {
-  console.log('yay');
+  // Get meets from the meet part of the database
   const meets = await Meet.find().sort({ created: 'desc' });
-  console.log(`meets`, meets);
+  // Send back the meets to the client
   res.json(meets);
 };
