@@ -1,20 +1,30 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import Hero from './Hero';
-import FeaturedJobs from './FeaturedJobs';
-import { jobs } from '../models/data.json';
+import Featured from './Featured';
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      jobs
+      meets: null
     };
+  }
+  componentDidMount() {
+    axios
+      .get('http://localhost:3030/meets')
+      .then(response => {
+        this.setState({
+          meets: response.data
+        });
+      })
+      .catch(err => console.error(err));
   }
   render() {
     return (
       <main>
         <Hero />
-        <FeaturedJobs jobs={this.state.jobs} />
+        {!this.state.meets ? `Loading...` : <Featured meets={this.state.meets} />}
       </main>
     );
   }
