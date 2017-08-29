@@ -4,6 +4,8 @@ const userController = require('../controllers/usersController');
 const meetController = require('../controllers/meetController');
 const authController = require('../controllers/authController');
 
+router.get('/meets', meetController.getMeets);
+
 router.post('/register', userController.validateRegister, userController.signup, authController.login);
 
 router.post('/postmeet', meetController.postMeet);

@@ -1,29 +1,29 @@
-.Explore {
+.FindMeet {
 }
 
-.Explore-title {
+.FindMeet-title {
   font-size: 3.5em;
   font-weight: 700;
   line-height: 2em;
 }
 
-.Explore-search-group {
+.FindMeet-search-group {
 }
 
-.Explore-search__input {
+.FindMeet-search__input {
 }
 
-.Explore-search__btn {
+.FindMeet-search__btn {
 }
 
-.Explore-matches {
+.FindMeet-matches {
   position: relative;
   font-size: 1.2em;
   font-weight: 300;
   margin-bottom: 3em;
 }
 
-.Explore-matches::before {
+.FindMeet-matches::before {
   border-top: 1px solid #ccc;
   content: "";
   z-index: -1;
@@ -36,7 +36,7 @@
   margin: 0 auto;
 }
 
-.Explore-matches span {
+.FindMeet-matches span {
   background: white;
   padding: 0 15px;
 }

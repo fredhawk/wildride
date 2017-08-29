@@ -2,7 +2,7 @@ import React from 'react';
 import './MeetItem.css';
 
 const MeetItem = props => {
-  const { about, location, date, time, food, deadline, save } = props.meet;
+  const { about, location, food, deadline, save } = props.meet;
   return (
     <div className="MeetItem">
       <picture className="MeetItem__picture">
@@ -17,10 +17,10 @@ const MeetItem = props => {
             At {location}
           </p>
           <p className="MeetItem__datetime">
-            {date}
+            {/* {date} */}
           </p>
           <p className="MeetItem__datetime">
-            {time}
+            {/* {time} */}
           </p>
           <p className="MeetItem__datetime">
             Will food be served? {food ? 'Yes' : 'No'}
