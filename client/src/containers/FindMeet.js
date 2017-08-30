@@ -16,7 +16,7 @@ class FindMeet extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:3030/meets')
+      .get('/meets')
       .then(response => {
         this.setState({
           meets: response.data,
@@ -41,9 +41,7 @@ class FindMeet extends Component {
         {!this.state.meets ? `Loading...` : <MeetList meets={!this.state.searchResult ? this.state.meets : this.state.searchResult} />}
 
         <div className="FindMeet-matches">
-          <span>
-            Found {this.state.totalMatches} matches
-          </span>
+          <span>Found {this.state.totalMatches} matches</span>
         </div>
       </section>
     );

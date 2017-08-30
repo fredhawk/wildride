@@ -7,7 +7,7 @@ class Login extends Component {
     const email = e.target.email.value;
     const password = e.target.password.value;
     axios
-      .post('http://localhost:3030/login', { email, password })
+      .post('/login', { email, password })
       .then(response => {
         // call a function that changes the header
         this.props.handleUserInfo(response.data);
