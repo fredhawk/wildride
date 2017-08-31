@@ -10,10 +10,10 @@ const Hero = () => {
           <h1 className="Hero-title">Travel. Work.</h1>
           <h2 className="Hero-title__see-world">See the world</h2>
           <div className="Hero-navigation">
-            <Link to="/find-meet" className="Hero-btn Hero-btn-explore">
+            <Link to="/meet" className="Hero-btn Hero-btn-explore">
               Explore all Meets
             </Link>
-            <Link to="/post-meet" className="Hero-btn Hero-btn-explore">
+            <Link to="/meet/new" className="Hero-btn Hero-btn-explore">
               Post a meet
             </Link>
           </div>

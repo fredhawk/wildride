@@ -23,7 +23,7 @@ class PostMeet extends Component {
     // console.log(time);
     // console.log(date);
     axios
-      .post('/postmeet', { about, location, food, deadline })
+      .post('/meet/new', { about, location, food, deadline })
       .then(response => {
         console.log(response);
         // this.props.history.push('/');
