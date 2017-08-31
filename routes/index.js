@@ -8,6 +8,7 @@ const authController = require('../controllers/authController');
 router.get('/api/meet', meetController.getMeets);
 // Get one meetup from server
 router.get('/api/meet/:id', meetController.getSingleMeet);
+// Post a new meet to server
 router.post('/meet/new', meetController.postMeet);
 
 router.post('/register', userController.validateRegister, userController.signup, authController.login);
