@@ -18,11 +18,16 @@ class App extends Component {
       user: userInfo
     });
   }
+
+  logout() {
+    this.setState({
+      user: null
+    });
+  }
   render() {
     return (
       <div className="App">
-        <Header user={this.state.user} />
-        <Profile /> {/*}
+        <Header user={this.state.user} logout={() => this.logout()} />
         <Main handleUserInfo={info => this.handleUserInfo(info)} />
         <Links /> {*/}
         

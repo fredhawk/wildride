@@ -10,7 +10,7 @@ class Register extends Component {
     const password = e.target.password.value;
     const passwordConfirm = e.target.passwordconfirm.value;
     axios
-      .post('http://localhost:3030/register', { name, email, password, passwordConfirm })
+      .post('/register', { name, email, password, passwordConfirm })
       .then(response => {
         // call a function that changes the header
         this.props.handleUserInfo(response.data);

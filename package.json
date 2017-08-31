@@ -18,8 +18,10 @@
     ]
   },
   "scripts": {
-    "dev": "nodemon -r dotenv/config server.js",
-    "start": "node -r dotenv/config server.js"
+    "start": "node -r dotenv/config server.js",
+    "server": "nodemon -r dotenv/config server.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -32,12 +34,9 @@
   },
   "homepage": "https://github.com/osycon/chingu-bears-temp#readme",
   "dependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-es2016": "^6.24.1",
     "body-parser": "^1.17.2",
     "browserslist": "^2.2.2",
+    "concurrently": "^3.5.0",
     "cors": "^2.8.4",
     "dotenv": "^4.0.0",
     "es6-promisify": "^5.0.0",

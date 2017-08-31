@@ -6,7 +6,7 @@ const promisify = require('es6-promisify');
 exports.login = (req, res) => {
   passport.authenticate('local')(req, res, () => {
     if (req.user) {
-      return res.send(JSON.stringify(req.user, { isLoggedIn: true }));
+      return res.send(JSON.stringify(req.user));
     }
     return res.send(JSON.stringify({ error: `There was an error logging in.` }));
   });
@@ -14,7 +14,7 @@ exports.login = (req, res) => {
 
 exports.logout = (req, res) => {
   req.logout();
-  res.json({ isLoggedIn: false });
+  res.send({ auth: false });
 };
 // exports.isLoggedIn = (req, res, next) => {
 //   if (req.isAuthenticated()) {
