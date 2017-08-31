@@ -1,14 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Meet from './Meet';
 import './MeetItem.css';
 
 const MeetItem = props => {
-  console.log(props);
   const { _id, about, location, food, deadline, save } = props.meet;
   return (
     <div className="MeetItem">
-      <Link to={`/meet/${_id}`} className="MeetItem__link">
+      <a href={`/meet/${_id}`} className="MeetItem__link">
         <picture className="MeetItem__picture">
           <img src="https://unsplash.it/600/400/?random" alt="random" className="MeetItem__img" />
         </picture>
@@ -27,7 +24,7 @@ const MeetItem = props => {
             <div className="MeetItem__footer--save">{save ? `Saved` : `Not Saved`}</div>
           </footer>
         </div>
-      </Link>
+      </a>
     </div>
   );
 };

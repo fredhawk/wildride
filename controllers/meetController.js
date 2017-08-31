@@ -13,3 +13,10 @@ exports.getMeets = async (req, res) => {
   // Send back the meets to the client
   res.json(meets);
 };
+
+exports.getSingleMeet = async (req, res) => {
+  console.log(`Yaya got a meet`);
+  console.log(`req.params`, req.params);
+  res.send('yay');
+  // const meet = await Meet.find({_id: req.params.id})
+};
