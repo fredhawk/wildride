@@ -15,4 +15,9 @@ router.post('/api/register', userController.validateRegister, userController.sig
 
 router.post('/api/login', authController.login);
 
+// Route to test if user is logged in or not.
+router.get('/api/current_user', (req, res) => {
+  res.send(req.user);
+});
+
 module.exports = router;

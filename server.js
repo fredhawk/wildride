@@ -1,6 +1,8 @@
 const express = require('express');
+const session = require('express-session');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const MongoStore = require('connect-mongo')(session);
 const cors = require('cors');
 const passport = require('passport');
 const promisify = require('es6-promisify');
@@ -11,7 +13,7 @@ mongoose.connect(process.env.DATABASE, {
 });
 mongoose.Promise = global.Promise;
 mongoose.connection.on('error', err => {
-  console.error(`Error 🙅 🚫 🙅 🚫 🙅 🚫 🙅 🚫 →  ${err.message}`);
+  console.error(`Error 🙅 🚫 →  ${err.message}`);
 });
 require('./models/User');
 require('./models/Meet');
@@ -31,6 +33,16 @@ app.use(expressValidator());
 
 app.use(cors());
 
+// Need cookie stuff here
+app.use(
+  session({
+    secret: process.env.SECRET,
+    key: process.env.KEY,
+    resave: false,
+    saveUninitialized: false,
+    store: new MongoStore({ mongooseConnection: mongoose.connection })
+  })
+);
 // // Passport JS is what we use to handle our logins
 app.use(passport.initialize());
 app.use(passport.session());
