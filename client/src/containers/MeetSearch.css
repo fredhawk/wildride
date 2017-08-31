@@ -1,31 +1,31 @@
-.FindMeet {
+.MeetSearch {
 }
 
-.FindMeet-title {
+.MeetSearch-title {
   font-size: 3.5em;
   font-weight: 700;
   line-height: 2em;
 }
 
-.FindMeet-search-group {
+.MeetSearch-search-group {
 }
 
-.FindMeet-search__input {
+.MeetSearch-search__input {
 }
 
-.FindMeet-search__btn {
+.MeetSearch-search__btn {
 }
 
-.FindMeet-matches {
+.MeetSearch-matches {
   position: relative;
   font-size: 1.2em;
   font-weight: 300;
   margin-bottom: 3em;
 }
 
-.FindMeet-matches::before {
+.MeetSearch-matches::before {
   border-top: 1px solid #ccc;
-  content: "";
+  content: '';
   z-index: -1;
   width: 95%;
   position: absolute;
@@ -36,7 +36,7 @@
   margin: 0 auto;
 }
 
-.FindMeet-matches span {
+.MeetSearch-matches span {
   background: white;
   padding: 0 15px;
 }
