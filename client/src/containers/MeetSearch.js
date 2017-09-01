@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import MeetList from '../components/MeetList';
 import Search from './Search';
-import './FindMeet.css';
+import './MeetSearch.css';
 
-class FindMeet extends Component {
+class MeetSearch extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,7 +16,7 @@ class FindMeet extends Component {
 
   componentDidMount() {
     axios
-      .get('/meets')
+      .get('/api/meet')
       .then(response => {
         this.setState({
           meets: response.data,
@@ -35,12 +35,12 @@ class FindMeet extends Component {
   }
   render() {
     return (
-      <section className="FindMeet">
-        <h1 className="FindMeet-title">Find Meets</h1>
+      <section className="MeetSearch">
+        <h1 className="MeetSearch-title">Find Meets</h1>
         <Search getSearch={value => this.getMatches(value)} />
         {!this.state.meets ? `Loading...` : <MeetList meets={!this.state.searchResult ? this.state.meets : this.state.searchResult} />}
 
-        <div className="FindMeet-matches">
+        <div className="MeetSearch-matches">
           <span>Found {this.state.totalMatches} matches</span>
         </div>
       </section>
@@ -48,4 +48,4 @@ class FindMeet extends Component {
   }
 }
 
-export default FindMeet;
+export default MeetSearch;

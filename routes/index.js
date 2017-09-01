@@ -4,11 +4,15 @@ const userController = require('../controllers/usersController');
 const meetController = require('../controllers/meetController');
 const authController = require('../controllers/authController');
 
-router.get('/meets', meetController.getMeets);
+// Get all meetups from server
+router.get('/api/meet', meetController.getMeets);
+// Get one meetup from server
+router.get('/api/meet/:id', meetController.getSingleMeet);
+// Post a new meet to server
+router.post('/api/meet/new', meetController.postMeet);
 
-router.post('/register', userController.validateRegister, userController.signup, authController.login);
+router.post('/api/register', userController.validateRegister, userController.signup, authController.login);
 
-router.post('/postmeet', meetController.postMeet);
-router.post('/login', authController.login);
+router.post('/api/login', authController.login);
 
 module.exports = router;
