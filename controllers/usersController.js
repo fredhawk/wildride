@@ -28,3 +28,10 @@ exports.validateRegister = (req, res, next) => {
   }
   next();
 };
+
+exports.getUser = async (req, res) => {
+  //Get user from the user´part of the database
+  const user = await User.find(/*something to identify the user*/);
+  // Send back user data
+  res.json(user);
+};

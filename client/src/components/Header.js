@@ -13,7 +13,7 @@ const Header = props => {
             </li>
             <li className="nav__item">
               {/* This link is going to link to profile */}
-              <NavLink to="#">
+              <NavLink to="/profile">
                 {props.user.name}
               </NavLink>
             </li>
