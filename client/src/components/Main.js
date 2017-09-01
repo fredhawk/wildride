@@ -5,6 +5,7 @@ import Register from '../containers/Register';
 import FindMeet from '../containers/FindMeet';
 import PostMeet from '../containers/PostMeet';
 import Login from '../containers/Login';
+import Profile from './Profile';
 
 const Main = props => {
   return (
@@ -16,6 +17,8 @@ const Main = props => {
         <Route path="/find-meet" component={FindMeet} />
         <Route path="/login" render={routeProps => <Login {...props} forRoute={routeProps} />} />
         <Route path="/logout" component={Home} />
+      {/*not working yet*/}
+        <Route path="/profile" render={routeProps => <Profile {...props} forRoute={routeProps} />} />
       </Switch>
     </main>
   );
