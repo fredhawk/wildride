@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = props => {
-  if (props.user !== null) {
+  if (props.user) {
     return (
       <section className="Header">
         <nav className="nav">
