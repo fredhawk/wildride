@@ -20,9 +20,8 @@ const MeetListItem = props => {
           </div>
           <footer className="MeetListItem__footer">
             <div className="MeetListItem__footer--apply">
-              <span className="MeetListItem__footer--days">Meet is in{formatedDate}</span>
+              <span className="MeetListItem__footer--days">Meet is in {formatedDate}</span>
             </div>
-            <div className="MeetListItem__footer--save">{save ? `Saved` : `Not Saved`}</div>
           </footer>
         </div>
       </a>
