@@ -4,6 +4,7 @@ import './App.css';
 import Header from './Header';
 import Main from './Main';
 import Links from './Links';
+import Profile from './Profile';
 
 class App extends Component {
   constructor(props) {
@@ -43,7 +44,8 @@ class App extends Component {
       <div className="App">
         <Header user={this.state.user} logout={() => this.logout()} />
         <Main handleUserInfo={info => this.handleUserInfo(info)} />
-        <Links />
+        <Links /> {*/}
+        
       </div>
     );
   }
