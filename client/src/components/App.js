@@ -44,7 +44,7 @@ class App extends Component {
       <div className="App">
         <Header user={this.state.user} logout={() => this.logout()} />
         <Main handleUserInfo={info => this.handleUserInfo(info)} />
-        <Links /> {*/}
+        <Links />
         
       </div>
     );
