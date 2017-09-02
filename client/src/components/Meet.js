@@ -10,6 +10,14 @@ class Meet extends Component {
     axios.get(`/api/meet/${this.props.match.params.id}`).then(meet => this.setState({ meet }));
   }
 
+  handleClick() {
+    // make a post request to update with attending
+    axios
+      .post('/api/attend')
+      .then(res => console.log(res))
+      .catch(err => console.error(err));
+  }
+
   renderContent() {
     const { location, about, food, date, attendees } = this.state.meet.data[0];
     const formatedDate = distanceInWordsToNow(date);
@@ -34,7 +42,9 @@ class Meet extends Component {
           <h4>So far {attendees.length} have signed up</h4>
         </div>
         <div className="Meet__item">
-          <button className="Meet__item--btn">Attend</button>
+          <button onClick={this.handleClick} className="Meet__item--btn">
+            Attend
+          </button>
         </div>
       </article>
     );
