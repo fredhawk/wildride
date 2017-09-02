@@ -3,7 +3,7 @@ import './MeetListItem.css';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 
 const MeetListItem = props => {
-  const { _id, about, location, food, date, save } = props.meet;
+  const { _id, about, location, food, date } = props.meet;
   const formatedDate = distanceInWordsToNow(date);
 
   return (
