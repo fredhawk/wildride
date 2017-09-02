@@ -16,21 +16,22 @@ const meetSchema = new Schema({
     type: Date,
     required: 'Please provide a date for the meet.'
   },
-  // time: {
-  //   type: Date,
-  //   required: 'Please provide a time for the meet.'
-  // },
   food: {
-    type: String,
+    type: Boolean,
     required: 'Please inform if there will be food served.'
-  },
-  deadline: {
-    type: Number
   },
   author: {
     type: mongoose.Schema.ObjectId,
     ref: 'User',
     required: 'You must supply an author!'
+  },
+  attendees: {
+    type: [mongoose.Schema.ObjectId],
+    ref: 'User'
+  },
+  created: {
+    type: Date,
+    default: Date.now
   }
 });
 

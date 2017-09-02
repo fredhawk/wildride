@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import DayPickerInput from 'react-day-picker/DayPickerInput';
+import 'react-day-picker/lib/style.css';
+
 import './PostMeet.css';
 
 class PostMeet extends Component {
@@ -8,10 +11,9 @@ class PostMeet extends Component {
     const about = e.target.about.value;
     const location = e.target.location.value;
     const date = e.target.date.value;
-    const food = e.target.food.value;
-    const deadline = e.target.deadline.value;
+    const food = e.target.food.checked;
     axios
-      .post('/api/meet/new', { about, location, date, food, deadline })
+      .post('/api/meet/new', { about, location, date, food })
       .then(response => {
         this.props.history.push('/');
       })
@@ -33,23 +35,13 @@ class PostMeet extends Component {
           <label htmlFor="date" className=" form__label PostMeet__label">
             When is the meet?
           </label>
-          <input type="date" className="form__input PostMeet__input" name="date" required />
+          <DayPickerInput placeholder="YYYY-MM-DD" format="YYYY-MM-DD" name="date" required />
           <div>
-            <label className="form__label">Will there be food served?</label>
-            <br />
             <label htmlFor="food" className="form__label PostMeet__label">
-              No
+              Please check if food will be served
             </label>
-            <input type="radio" className="form__input PostMeet__input--radio" name="food" value="no" defaultChecked />
-            <label htmlFor="food" className="form__label PostMeet__label">
-              Yes
-            </label>
-            <input type="radio" className="form__input PostMeet__input--radio" name="food" value="Yes" />
+            <input type="checkbox" className="form__input PostMeet__input--checkbox" name="food" value="true" />
           </div>
-          <label htmlFor="deadline" className="form__label PostMeet__label">
-            Application deadline (days)
-          </label>
-          <input type="number" className="form__input PostMeet__input" name="deadline" required />
           <input type="submit" className="form__button" defaultValue="Set up a meet" />
         </form>
       </section>
