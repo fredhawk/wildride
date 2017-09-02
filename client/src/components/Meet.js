@@ -9,7 +9,6 @@ class Meet extends Component {
   componentDidMount() {
     axios.get(`/api/meet/${this.props.match.params.id}`).then(meet => {
       this.setState({ meet });
-      console.log(meet);
     });
   }
 
@@ -21,7 +20,6 @@ class Meet extends Component {
         this.setState({
           meet
         });
-        console.log(meet);
       })
       .catch(err => console.error(err));
   }
