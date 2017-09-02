@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { Component } from 'react';
+import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 
 class Meet extends Component {
   state = {
@@ -12,13 +13,38 @@ class Meet extends Component {
   }
 
   renderContent() {
-    const { location, about, deadline, food } = this.state.meet.data[0];
+    const { location, about, food, date, attendees } = this.state.meet.data[0];
+    const formatedDate = distanceInWordsToNow(date);
+    console.log(food);
     return (
       <article className="Meet">
-        <p className="Meet__item">{about}</p>
+        <div className="Meet__item">
+          <h4>Meet is about</h4>
+          <p>{about}</p>
+        </div>
+        <div className="Meet__item">
+          <h4>Meet is at:</h4>
+          <p>{location}</p>
+        </div>
+        <div className="Meet__item">
+          <h4>Meet is on:</h4>
+          <p>{formatedDate}</p>
+        </div>
+        <div className="Meet__item">
+          <h4>Food will {food === 'yes' ? 'be served.' : 'not be served.'}</h4>
+          {/* <p>{about}</p> */}
+        </div>
+        <div className="Meet__item">
+          <h4>So far {attendees.length} have signed up</h4>
+          {/* <p>{about}</p> */}
+        </div>
+        <div className="Meet__item">
+          <button className="Meet__item--btn">Attend</button>
+        </div>
+        {/* <p className="Meet__item">{about}</p>
         <p className="Meet__item">{location}</p>
         <p className="Meet__item">{deadline}</p>
-        <p className="Meet__item">{food}</p>
+        <p className="Meet__item">{food}</p> */}
       </article>
     );
   }
