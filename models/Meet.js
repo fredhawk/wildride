@@ -17,7 +17,7 @@ const meetSchema = new Schema({
     required: 'Please provide a date for the meet.'
   },
   food: {
-    type: String,
+    type: Boolean,
     required: 'Please inform if there will be food served.'
   },
   author: {
