@@ -27,8 +27,9 @@ exports.attend = async (req, res) => {
     {
       $push: { attendees: req.user._id }
     },
-    function(err, meet) {
-      res.send(meet);
+    {
+      new: true
     }
-  );
+  ).exec();
+  res.send(meet);
 };

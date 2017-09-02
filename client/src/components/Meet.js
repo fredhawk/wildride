@@ -7,7 +7,7 @@ class Meet extends Component {
     meet: null
   };
   componentDidMount() {
-    axios.get(`/api/meet/${this.props.match.params.id}`).then(meet => {
+    axios.get(`/api/meet/${this.props.forRoute.match.params.id}`).then(meet => {
       this.setState({ meet });
     });
   }
@@ -15,7 +15,7 @@ class Meet extends Component {
   handleClick() {
     // make a post request to update with attending
     axios
-      .post(`/api/meet/attend/${this.props.match.params.id}`)
+      .post(`/api/meet/attend/${this.props.forRoute.match.params.id}`)
       .then(meet => {
         this.setState({
           meet
@@ -48,9 +48,13 @@ class Meet extends Component {
           <h4>So far {attendees.length} have signed up</h4>
         </div>
         <div className="Meet__item">
-          <button onClick={() => this.handleClick()} className="Meet__item--btn">
-            Attend
-          </button>
+          {attendees.includes(this.props.user._id) ? (
+            'Allready attending'
+          ) : (
+            <button onClick={() => this.handleClick()} className="Meet__item--btn">
+              Attend
+            </button>
+          )}
         </div>
       </article>
     );
