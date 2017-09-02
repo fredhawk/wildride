@@ -35,7 +35,7 @@ class PostMeet extends Component {
           <label htmlFor="date" className=" form__label PostMeet__label">
             When is the meet?
           </label>
-          <DayPickerInput placeholder="YYYY-MM-DD" format="YYYY-MM-DD" name="date" />
+          <DayPickerInput placeholder="YYYY-MM-DD" format="YYYY-MM-DD" name="date" required />
           <div>
             <label htmlFor="food" className="form__label PostMeet__label">
               Please check if food will be served
