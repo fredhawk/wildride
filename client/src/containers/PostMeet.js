@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
-
 import './PostMeet.css';
 
 class PostMeet extends Component {
@@ -11,6 +11,7 @@ class PostMeet extends Component {
     const about = e.target.about.value;
     const location = e.target.location.value;
     const date = e.target.date.value;
+
     const food = e.target.food.checked;
     axios
       .post('/api/meet/new', { about, location, date, food })
