@@ -18,5 +18,17 @@ exports.getMeets = async (req, res) => {
 
 exports.getSingleMeet = async (req, res) => {
   const meet = await Meet.find({ _id: req.params.id });
-  res.send(meet);
+  res.send(meet[0]);
+};
+
+exports.attend = async (req, res) => {
+  const meet = await Meet.findByIdAndUpdate(
+    req.params.id,
+    {
+      $push: { attendees: req.user._id }
+    },
+    function(err, meet) {
+      res.send(meet);
+    }
+  );
 };
