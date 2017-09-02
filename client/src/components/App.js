@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './App.css';
 import Header from './Header';
 import Main from './Main';
@@ -11,7 +12,16 @@ class App extends Component {
       user: null
     };
   }
-  // Need to write a function that removes userInfo on log out
+  componentDidMount() {
+    axios
+      .get('/api/current_user')
+      .then(res => {
+        this.setState({
+          user: res.data || false
+        });
+      })
+      .catch(err => console.error(err));
+  }
   handleUserInfo(userInfo) {
     this.setState({
       user: userInfo
@@ -19,9 +29,14 @@ class App extends Component {
   }
 
   logout() {
-    this.setState({
-      user: null
-    });
+    axios
+      .get('/api/logout')
+      .then(res => {
+        this.setState({
+          user: false
+        });
+      })
+      .catch(err => console.error(err));
   }
   render() {
     return (
