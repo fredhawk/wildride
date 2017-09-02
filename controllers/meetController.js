@@ -33,3 +33,15 @@ exports.attend = async (req, res) => {
   ).exec();
   res.send(meet);
 };
+exports.unattend = async (req, res) => {
+  const meet = await Meet.findByIdAndUpdate(
+    req.params.id,
+    {
+      $pull: { attendees: req.user._id }
+    },
+    {
+      new: true
+    }
+  ).exec();
+  res.send(meet);
+};

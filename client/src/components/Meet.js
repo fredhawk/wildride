@@ -12,10 +12,20 @@ class Meet extends Component {
     });
   }
 
-  handleClick() {
+  attendClick() {
     // make a post request to update with attending
     axios
       .post(`/api/meet/attend/${this.props.forRoute.match.params.id}`)
+      .then(meet => {
+        this.setState({
+          meet
+        });
+      })
+      .catch(err => console.error(err));
+  }
+  unattendClick() {
+    axios
+      .post(`/api/meet/unattend/${this.props.forRoute.match.params.id}`)
       .then(meet => {
         this.setState({
           meet
@@ -49,9 +59,11 @@ class Meet extends Component {
         </div>
         <div className="Meet__item">
           {attendees.includes(this.props.user._id) ? (
-            'Allready attending'
+            <button onClick={() => this.unattendClick()} className="Meet__item--btn">
+              Unattend
+            </button>
           ) : (
-            <button onClick={() => this.handleClick()} className="Meet__item--btn">
+            <button onClick={() => this.attendClick()} className="Meet__item--btn">
               Attend
             </button>
           )}
