@@ -16,13 +16,14 @@ exports.logout = (req, res) => {
   req.logout();
   res.send({ auth: false });
 };
-// exports.isLoggedIn = (req, res, next) => {
-//   if (req.isAuthenticated()) {
-//     next();
-//     return;
-//   }
-//   res.redirect('/login');
-// };
+
+exports.isLoggedIn = (req, res, next) => {
+  if (req.isAuthenticated()) {
+    next();
+    return;
+  }
+  res.redirect('/login');
+};
 
 exports.confirmedPassword = (req, res, next) => {
   if (req.body.password === req.body['passwordConfirm']) {

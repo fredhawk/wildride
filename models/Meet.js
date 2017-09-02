@@ -12,10 +12,10 @@ const meetSchema = new Schema({
     type: String,
     required: 'The meet needs a location.'
   },
-  // date: {
-  //   type: Date,
-  //   required: 'Please provide a date for the meet.'
-  // },
+  date: {
+    type: Date,
+    required: 'Please provide a date for the meet.'
+  },
   // time: {
   //   type: Date,
   //   required: 'Please provide a time for the meet.'
@@ -26,6 +26,11 @@ const meetSchema = new Schema({
   },
   deadline: {
     type: Number
+  },
+  author: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'User',
+    required: 'You must supply an author!'
   }
 });
 

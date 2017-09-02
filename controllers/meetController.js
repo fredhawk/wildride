@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 const Meet = mongoose.model('Meet');
 
-exports.postMeet = async (req, res, next) => {
+exports.postMeet = async (req, res) => {
+  req.body.author = req.user._id;
   const meet = await new Meet(req.body).save();
   res.json(req.body);
 };

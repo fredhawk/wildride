@@ -1,32 +1,19 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import DatePicker from 'react-datepicker';
-// import moment from 'moment';
 import './PostMeet.css';
 
 class PostMeet extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     startDate: moment(Date.now())
-  //   };
-  // }
-
   handleSubmit(e) {
     e.preventDefault();
     const about = e.target.about.value;
     const location = e.target.location.value;
-    // const date = e.target.date.value;
-    // const time = e.target.time.value;
+    const date = e.target.date.value;
     const food = e.target.food.value;
     const deadline = e.target.deadline.value;
-    // console.log(time);
-    // console.log(date);
     axios
-      .post('/api/meet/new', { about, location, food, deadline })
+      .post('/api/meet/new', { about, location, date, food, deadline })
       .then(response => {
-        console.log(response);
-        // this.props.history.push('/');
+        this.props.history.push('/');
       })
       .catch(err => console.error(err));
   }
@@ -43,16 +30,10 @@ class PostMeet extends Component {
             Where is the meet?
           </label>
           <input type="text" className="form__input PostMeet__input" name="location" placeholder="Joes bar, Berlin, Germany" required />
-          {/* <label htmlFor="date" className=" form__label PostMeet__label">
-            When is the meet?
-          </label> */}
-          {/* <input type="date" className="form__input PostMeet__input" name="date" required /> */}
-          {/* <input type="text" id="datepicker" className="form__input PostMeet__input" name="date" required /> */}
-          {/* <DatePicker selected={this.state.startDate} onChange={this.handleChange} /> */}
-          {/* <label htmlFor="time" className=" form__label PostMeet__label">
+          <label htmlFor="date" className=" form__label PostMeet__label">
             When is the meet?
           </label>
-          <input type="time" className="form__input PostMeet__input" name="time" required /> */}
+          <input type="date" className="form__input PostMeet__input" name="date" required />
           <div>
             <label className="form__label">Will there be food served?</label>
             <br />
