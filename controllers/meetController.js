@@ -4,6 +4,7 @@ const Meet = mongoose.model('Meet');
 
 exports.postMeet = async (req, res) => {
   req.body.author = req.user._id;
+  req.body.attendees = req.user._id;
   const meet = await new Meet(req.body).save();
   res.json(req.body);
 };
