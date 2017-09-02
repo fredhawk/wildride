@@ -14,6 +14,7 @@ router.post('/api/meet/new', meetController.postMeet);
 router.post('/api/register', userController.validateRegister, userController.signup, authController.login);
 
 router.post('/api/login', authController.login);
+router.get('/api/logout', authController.logout);
 
 // Route to test if user is logged in or not.
 router.get('/api/current_user', (req, res) => {
