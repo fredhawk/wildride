@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 class Login extends Component {
+  state = {
+    login: true
+  };
   handleSubmit(e) {
     e.preventDefault();
     const email = e.target.email.value;
@@ -10,12 +13,18 @@ class Login extends Component {
       .post('/api/login', { email, password })
       .then(response => {
         // call a function that changes the header
+        this.setState({
+          login: true
+        });
         this.props.handleUserInfo(response.data);
         // This should route to profile later
         this.props.forRoute.history.push('/');
       })
       .catch(err => {
         // send person to login screen as login failed.
+        this.setState({
+          login: false
+        });
         this.props.forRoute.history.push('/login');
       });
   }
@@ -23,6 +32,7 @@ class Login extends Component {
     return (
       <section className="Login">
         <h1 className="Login__title">Login</h1>
+        {this.state.login ? '' : 'Wrong email or password. Please try again!'}
         <form className="form Login__form" onSubmit={e => this.handleSubmit(e)}>
           <label className="form__label" htmlFor="email">
             Email
