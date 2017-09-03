@@ -1,0 +1,7 @@
+.MeetList-list-group {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1300px;
+  display: flex;
+  flex-flow: row wrap;
+}
