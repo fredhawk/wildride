@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const User = mongoose.model('User');
+const Meet = mongoose.model('Meet');
 const promisify = require('es6-promisify');
 
 exports.signup = async (req, res, next) => {
@@ -27,6 +28,49 @@ exports.validateRegister = (req, res, next) => {
     return;
   }
   next();
+};
+
+exports.attend = async (req, res) => {
+  const user = await User.findByIdAndUpdate(
+    req.user._id,
+    {
+      $push: { meetups: req.params.id }
+    },
+    {
+      new: true
+    }
+  ).exec();
+  const meet = await Meet.findByIdAndUpdate(
+    req.params.id,
+    {
+      $push: { attendees: req.user._id }
+    },
+    {
+      new: true
+    }
+  ).exec();
+  res.send(meet);
+};
+exports.unattend = async (req, res) => {
+  const user = await User.findByIdAndUpdate(
+    req.user._id,
+    {
+      $pull: { meetups: req.params.id }
+    },
+    {
+      new: true
+    }
+  ).exec();
+  const meet = await Meet.findByIdAndUpdate(
+    req.params.id,
+    {
+      $pull: { attendees: req.user._id }
+    },
+    {
+      new: true
+    }
+  ).exec();
+  res.send(meet);
 };
 
 exports.getUser = async (req, res) => {
