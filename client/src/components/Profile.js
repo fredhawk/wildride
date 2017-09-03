@@ -1,4 +1,5 @@
 import React from 'react';
+import MeetAttending from './MeetAttending';
 import './Profile.css';
 
 const Profile = props => {
@@ -47,6 +48,7 @@ const Profile = props => {
           </div>
         </div>
       </div>
+      <MeetAttending />
     </div>
   );
 };
