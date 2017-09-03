@@ -31,7 +31,8 @@ exports.validateRegister = (req, res, next) => {
 
 exports.getUser = async (req, res) => {
   //Get user from the user´part of the database
-  const user = await User.find(/*something to identify the user*/);
+  // const user = await User.find({ _id: req.params.id })
   // Send back user data
+  // console.log(user);
   res.json(user);
 };
