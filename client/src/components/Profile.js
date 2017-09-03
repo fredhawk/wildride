@@ -3,16 +3,6 @@ import Header from './Header';
 import './Profile.css';
 
 class Profile extends Component {
-    
-    state = {
-        user: null
-    };
-/*
-    componentDidMount () {
-        axios.get(`/api/user/${this.props.forRoute.match.params.user}`).then(user => {
-            this.setState({ meet });
-        });
-    } */
 
     render () {
     return (
