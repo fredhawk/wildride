@@ -11,6 +11,9 @@ router.get('/api/meet/:id', meetController.getSingleMeet);
 // Post a new meet to server
 router.post('/api/meet/new', meetController.postMeet);
 
+router.post('/api/meet/attend/:id', meetController.attend);
+router.post('/api/meet/unattend/:id', meetController.unattend);
+
 router.post('/api/register', userController.validateRegister, userController.signup, authController.login);
 
 router.post('/api/login', authController.login);
