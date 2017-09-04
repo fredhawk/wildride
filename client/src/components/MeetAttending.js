@@ -13,18 +13,14 @@ class MeetAttending extends Component {
     axios
       .get('/api/user/meetup')
       .then(response => {
-        // this.setState({
-        //   meets: response.data
-        // });
-        console.log(response);
+        this.setState({
+          meets: response.data.meetups
+        });
       })
       .catch(err => console.error(err));
   }
-  renderContent() {
-    <MeetList meets={this.state.meets} />;
-  }
   render() {
-    return <div>{this.renderContent()}</div>;
+    return <div>{this.state.meets ? <MeetList meets={this.state.meets} /> : `Loading...`}</div>;
   }
 }
 
