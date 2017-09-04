@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from './Header';
+import MeetAttending from './MeetAttending';
 import './Profile.css';
 
 class Profile extends Component {
@@ -30,10 +30,10 @@ class Profile extends Component {
                     <div className="profile-data"><p>{this.props.user.web}</p></div>
                 </div>
             </div>
+      <MeetAttending />
         </div>
     );
 }
 }
-
 
 export default Profile;

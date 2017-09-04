@@ -18,8 +18,21 @@ const userSchema = new Schema({
     trim: true,
     validate: [validator.isEmail, 'Invalid email address'],
     required: 'Please supply an email address'
-  }
+  },
+  meetups: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Meet'
+    }
+  ]
 });
+
+// userSchema.virtual('meetups', {
+//   ref: 'Meet',
+//   localField: 'attendees',
+//   foreignField: 'attends'
+// });
+// https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose
 
 userSchema.plugin(passportLocalMongoose, { usernameField: 'email' });
 userSchema.plugin(mongodbErrorHandler);

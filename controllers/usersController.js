@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const User = mongoose.model('User');
+const Meet = mongoose.model('Meet');
 const promisify = require('es6-promisify');
 
 exports.signup = async (req, res, next) => {
@@ -29,9 +30,58 @@ exports.validateRegister = (req, res, next) => {
   next();
 };
 
+exports.attend = async (req, res) => {
+  const user = await User.findByIdAndUpdate(
+    req.user._id,
+    {
+      $push: { meetups: req.params.id }
+    },
+    {
+      new: true
+    }
+  ).exec();
+  const meet = await Meet.findByIdAndUpdate(
+    req.params.id,
+    {
+      $push: { attendees: req.user._id }
+    },
+    {
+      new: true
+    }
+  ).exec();
+  res.send(meet);
+};
+exports.unattend = async (req, res) => {
+  const user = await User.findByIdAndUpdate(
+    req.user._id,
+    {
+      $pull: { meetups: req.params.id }
+    },
+    {
+      new: true
+    }
+  ).exec();
+  const meet = await Meet.findByIdAndUpdate(
+    req.params.id,
+    {
+      $pull: { attendees: req.user._id }
+    },
+    {
+      new: true
+    }
+  ).exec();
+  res.send(meet);
+};
+
+exports.getMeetup = async (req, res) => {
+  const user = await User.findById(req.user._id).populate('meetups');
+  res.send(user);
+};
+
 exports.getUser = async (req, res) => {
   //Get user from the user´part of the database
-  const user = await User.find(/*something to identify the user*/);
+  // const user = await User.find({ _id: req.params.id })
   // Send back user data
+  // console.log(user);
   res.json(user);
 };
