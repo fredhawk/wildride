@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from './Header';
+import MeetAttending from './MeetAttending';
 import './Profile.css';
 
 class Profile extends Component {
@@ -32,10 +32,10 @@ class Profile extends Component {
                 </div>
             </div>
             <button onClick={this.displayForm}><i className="fa fa-pencil-square-o fa-lg" /> Edit</button>
+      <MeetAttending />
         </div>
     );
 }
 }
-
 
 export default Profile;

@@ -18,7 +18,19 @@ const userSchema = new Schema({
     trim: true,
     validate: [validator.isEmail, 'Invalid email address'],
     required: 'Please supply an email address'
-  }
+  },
+  created: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Meet'
+    }
+  ],
+  meetups: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Meet'
+    }
+  ]
 });
 
 userSchema.plugin(passportLocalMongoose, { usernameField: 'email' });

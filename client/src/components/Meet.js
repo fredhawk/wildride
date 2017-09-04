@@ -35,6 +35,7 @@ class Meet extends Component {
   }
 
   renderContent() {
+    console.log(this.state.meet.data);
     const { location, about, food, date, attendees } = this.state.meet.data;
     const formatedDate = distanceInWordsToNow(date);
     return (
