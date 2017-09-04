@@ -4,6 +4,7 @@ const Meet = mongoose.model('Meet');
 
 exports.postMeet = async (req, res) => {
   req.body.author = req.user._id;
+
   req.body.attendees = req.user._id;
   const meet = await new Meet(req.body).save();
   res.json(req.body);
@@ -44,4 +45,18 @@ exports.unattend = async (req, res) => {
     }
   ).exec();
   res.send(meet);
+};
+
+exports.validateMeet = async (req, res, next) => {
+  req.sanitizeBody('about');
+  req.checkBody('about', 'You must supply a about!').notEmpty();
+  req.sanitizeBody('location');
+  req.checkBody('location', 'That location is not valid!').notEmpty();
+
+  const errors = req.validationErrors();
+  if (errors) {
+    // Stop it from running further
+    return;
+  }
+  next();
 };

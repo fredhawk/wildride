@@ -19,7 +19,6 @@ const Main = props => {
         <Route path="/meet/:id" render={routeProps => <Meet {...props} forRoute={routeProps} />} />
         <Route path="/login" render={routeProps => <Login {...props} forRoute={routeProps} />} />
         <Route path="/logout" component={Home} />
-        {/*not working yet*/}
         <Route path="/profile" render={routeProps => <Profile {...props} forRoute={routeProps} />} />
       </Switch>
     </main>

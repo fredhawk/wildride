@@ -9,7 +9,7 @@ router.get('/api/meet', meetController.getMeets);
 // Get one meetup from server
 router.get('/api/meet/:id', meetController.getSingleMeet);
 // Post a new meet to server
-router.post('/api/meet/new', meetController.postMeet);
+router.post('/api/meet/new', meetController.validateMeet, meetController.postMeet);
 
 router.post('/api/meet/attend/:id', userController.attend);
 router.post('/api/meet/unattend/:id', userController.unattend);
