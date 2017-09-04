@@ -1,12 +1,16 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 const Meet = mongoose.model('Meet');
+const User = mongoose.model('User');
 
 exports.postMeet = async (req, res) => {
   req.body.author = req.user._id;
 
   req.body.attendees = req.user._id;
   const meet = await new Meet(req.body).save();
+  const user = User.findByIdAndUpdate(req.user._id, {
+    $push: { created: meet._id }
+  }).exec();
   res.json(req.body);
 };
 
