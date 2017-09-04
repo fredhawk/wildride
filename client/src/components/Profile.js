@@ -3,6 +3,7 @@ import Header from './Header';
 import './Profile.css';
 
 class Profile extends Component {
+    this.displayForm = this.displayForm.bind(this);
 
     render () {
     return (
@@ -30,7 +31,7 @@ class Profile extends Component {
                     <div className="profile-data"><p>{this.props.user.web}</p></div>
                 </div>
             </div>
-            <button><i className="fa fa-pencil-square-o fa-lg" /> Edit</button>
+            <button onClick={this.displayForm}><i className="fa fa-pencil-square-o fa-lg" /> Edit</button>
         </div>
     );
 }
