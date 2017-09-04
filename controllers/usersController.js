@@ -73,6 +73,11 @@ exports.unattend = async (req, res) => {
   res.send(meet);
 };
 
+exports.getMeetup = async (req, res) => {
+  const user = await User.findById(req.user._id).populate('meetups');
+  res.send(user);
+};
+
 exports.getUser = async (req, res) => {
   //Get user from the user´part of the database
   // const user = await User.find({ _id: req.params.id })

@@ -5,7 +5,7 @@ import './Profile.css';
 const Profile = props => {
   return (
     <div className="profile-container">
-      <h2 id="profile-name">{props.user.name}</h2>
+      {/* <h2 id="profile-name">{props.user.name}</h2>
       <div className="profile-info">
         <div className="data-pair">
           <h4>
@@ -47,7 +47,7 @@ const Profile = props => {
             <p>{props.user.web}</p>
           </div>
         </div>
-      </div>
+      </div> */}
       <MeetAttending />
     </div>
   );

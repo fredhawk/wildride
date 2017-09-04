@@ -19,10 +19,12 @@ const userSchema = new Schema({
     validate: [validator.isEmail, 'Invalid email address'],
     required: 'Please supply an email address'
   },
-  meetups: {
-    type: [mongoose.Schema.ObjectId],
-    ref: 'Meet'
-  }
+  meetups: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Meet'
+    }
+  ]
 });
 
 // userSchema.virtual('meetups', {
