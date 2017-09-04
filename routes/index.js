@@ -11,13 +11,15 @@ router.get('/api/meet/:id', meetController.getSingleMeet);
 // Post a new meet to server
 router.post('/api/meet/new', meetController.validateMeet, meetController.postMeet);
 
-router.post('/api/meet/attend/:id', meetController.attend);
-router.post('/api/meet/unattend/:id', meetController.unattend);
+router.post('/api/meet/attend/:id', userController.attend);
+router.post('/api/meet/unattend/:id', userController.unattend);
 
 router.post('/api/register', userController.validateRegister, userController.signup, authController.login);
 
 router.post('/api/login', authController.login);
 router.get('/api/logout', authController.logout);
+
+router.get('/api/user/meetup', userController.getMeetup);
 
 // Route to test if user is logged in or not.
 router.get('/api/current_user', (req, res) => {
