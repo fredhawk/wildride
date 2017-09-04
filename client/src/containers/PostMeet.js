@@ -1,11 +1,25 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
 
-import DayPickerInput from 'react-day-picker/DayPickerInput';
-import 'react-day-picker/lib/style.css';
+import 'react-datepicker/dist/react-datepicker.css';
 import './PostMeet.css';
 
 class PostMeet extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      startDate: moment()
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(date) {
+    this.setState({
+      startDate: date
+    });
+  }
   handleSubmit(e) {
     e.preventDefault();
     const about = e.target.about.value;
@@ -36,7 +50,7 @@ class PostMeet extends Component {
           <label htmlFor="date" className=" form__label PostMeet__label">
             When is the meet?
           </label>
-          <DayPickerInput placeholder="YYYY-MM-DD" format="YYYY-MM-DD" name="date" required />
+          <DatePicker dateFormat="YYYY/MM/DD" selected={this.state.startDate} onChange={this.handleChange} placeholderText="Click to select a date" minDate={moment()} />
           <div>
             <label htmlFor="food" className="form__label PostMeet__label">
               Please check if food will be served
