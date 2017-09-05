@@ -40,23 +40,26 @@ class Meet extends Component {
     const formatedDate = distanceInWordsToNow(date);
     return (
       <article className="Meet">
+        <h2 className="Meet__title">
+          Details for meetup about <span className="Meet__item--info">{about}</span>
+        </h2>
         <div className="Meet__item">
-          <h4>Meet is about</h4>
-          <p>{about}</p>
+          <h3>
+            Meet is at <span className="Meet__item--info">{location}</span>
+          </h3>
         </div>
         <div className="Meet__item">
-          <h4>Meet is at:</h4>
-          <p>{location}</p>
+          <h3>
+            Meet is in <span className="Meet__item--info">{formatedDate}</span>
+          </h3>
         </div>
         <div className="Meet__item">
-          <h4>Meet is on:</h4>
-          <p>{formatedDate}</p>
+          <h3>Food will {food ? 'be served.' : 'not be served.'}</h3>
         </div>
         <div className="Meet__item">
-          <h4>Food will {food ? 'be served.' : 'not be served.'}</h4>
-        </div>
-        <div className="Meet__item">
-          <h4>So far {attendees.length} have signed up</h4>
+          <h3>
+            So far <span className="Meet__item--info">{attendees.length}</span> have signed up.
+          </h3>
         </div>
         <div className="Meet__item">
           {attendees.includes(this.props.user._id) ? (
