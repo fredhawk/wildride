@@ -1,0 +1,23 @@
+.Meet__btn {
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+  padding: 20px 32px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-weight: 400;
+  font-size: 0.9em;
+  line-height: 2em;
+  box-shadow: 0 10px 10px 0 rgba(8, 57, 96, 0.15);
+  color: white;
+  display: block;
+  width: 250px;
+}
+.Meet__btn--attend {
+  background-color: #1db6ef;
+}
+.Meet__btn--unattend {
+  background-color: #ef1d40;
+}

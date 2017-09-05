@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
+import './Meet.css';
 
 class Meet extends Component {
   state = {
@@ -35,7 +36,6 @@ class Meet extends Component {
   }
 
   renderContent() {
-    console.log(this.state.meet.data);
     const { location, about, food, date, attendees } = this.state.meet.data;
     const formatedDate = distanceInWordsToNow(date);
     return (
@@ -60,11 +60,11 @@ class Meet extends Component {
         </div>
         <div className="Meet__item">
           {attendees.includes(this.props.user._id) ? (
-            <button onClick={() => this.unattendClick()} className="Meet__item--btn">
+            <button onClick={() => this.unattendClick()} className="Meet__btn Meet__btn--unattend">
               Unattend
             </button>
           ) : (
-            <button onClick={() => this.attendClick()} className="Meet__item--btn">
+            <button onClick={() => this.attendClick()} className="Meet__btn Meet__btn--attend">
               Attend
             </button>
           )}
