@@ -6,42 +6,48 @@ class Profile extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            user: this.props.user,
-            form: false
+            user: this.props.user
         };
-        this.toggleForm = this.toggleForm.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
-    toggleForm() {
-        this.setState( prevState => ({
-            form: !prevState.form
-        }));
+    handleSubmit (e) {
+        e.preventDefault();
+        console.log("submit");
     }
+
+    handleChange (e) {
+        e.preventDefault();
+        console.log("change");
+    }
+
     render () {
     return (
-        <div className="profile-info">
-            Form
-            <div className="data-pair">
-                <h4>e-Mail:</h4>
-                <div className="profile-data"><p>{this.state.user.email}</p></div>
-            </div>
-            <div className="data-pair">
-                <h4>Location:</h4>
-                <div className="profile-data"><p>{this.state.user.location}</p></div>
-            </div>
-            <div className="data-pair">
-                <h4>Date of Birth:</h4>
-                <div className="profile-data"><p>{this.state.user.birth}</p></div>
-            </div>
-            <div className="data-pair">
-                <h4>Description:</h4>
-                <div className="profile-data"><p>{this.state.user.descr}</p></div>
-            </div>
-            <div className="data-pair">
-                <h4>Website:</h4>
-                <div className="profile-data"><p>{this.state.user.web}</p></div>
-            </div>        
-  <MeetAttending />
+        <div className="profile-form">
+            <form onSubmit={this.handleSubmit}>
+                <label>
+                    E-Mail:
+                    <input type="text" value={this.state.user.email} onChange={this.handleChange} />
+                </label>
+                <label>
+                    Location:
+                    <input type="text" value={this.state.user.location} onChange={this.handleChange} />
+                </label>
+                <label>
+                    Date of Birth:
+                    <input type="text" value={this.state.user.birth} onChange={this.handleChange} />
+                </label>
+                <label>
+                    Description:
+                    <input type="text" value={this.state.user.descr} onChange={this.handleChange} />
+                </label>
+                <label>
+                    Website:
+                    <input type="text" value={this.state.user.web} onChange={this.handleChange} />
+                </label>
+                <input type="submit" value="Save" />
+            </form>
         </div>
     );
 }
