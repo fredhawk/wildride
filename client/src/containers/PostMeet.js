@@ -50,7 +50,7 @@ class PostMeet extends Component {
           <label htmlFor="date" className=" form__label PostMeet__label">
             When is the meet?
           </label>
-          <DatePicker dateFormat="YYYY/MM/DD" selected={this.state.startDate} onChange={this.handleChange} placeholderText="Click to select a date" minDate={moment()} />
+          <DatePicker dateFormat="YYYY/MM/DD" selected={this.state.startDate} onChange={this.handleChange} placeholderText="Click to select a date" minDate={moment()} name="date" />
           <div>
             <label htmlFor="food" className="form__label PostMeet__label">
               Please check if food will be served
