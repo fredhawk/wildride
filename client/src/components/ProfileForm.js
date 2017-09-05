@@ -15,6 +15,7 @@ class Profile extends Component {
     handleSubmit (e) {
         e.preventDefault();
         console.log("submit");
+        this.props.forRoute.history.push('/profile');
     }
 
     handleChange (e) {
@@ -31,7 +32,7 @@ class Profile extends Component {
                 </label>
                 <label>
                     Location:
-                    <input type="text" value={this.state.user.location} onChange={this.handleChange} />
+                    <input type="text" value={this.state.user.name} onChange={this.handleChange} />
                 </label>
                 <label>
                     Date of Birth:
@@ -45,7 +46,7 @@ class Profile extends Component {
                     Website:
                     <input type="text" value={this.state.user.web} onChange={this.handleChange} />
                 </label>
-                <input type="submit" value="Save" />
+                <button type="submit"><i className="fa fa-check fa-lg" />Save</button>
             </form>
         </div>
     );
