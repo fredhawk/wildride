@@ -9,9 +9,6 @@ const MeetListItem = props => {
   return (
     <div className="MeetListItem">
       <a href={`/meet/${_id}`} className="MeetListItem__link">
-        <picture className="MeetListItem__picture">
-          <img src="https://unsplash.it/600/400/?random" alt="random" className="MeetListItem__img" />
-        </picture>
         <div className="MeetListItem__content">
           <div className="MeetListItem__info">
             <h3 className="MeetListItem__about">{about}</h3>
@@ -21,6 +18,9 @@ const MeetListItem = props => {
           <footer className="MeetListItem__footer">
             <div className="MeetListItem__footer--apply">
               <span className="MeetListItem__footer--days">Meet is in {formatedDate}</span>
+            </div>
+            <div className="MeetListItem__footer--apply">
+              <span>Learn more</span>
             </div>
           </footer>
         </div>
