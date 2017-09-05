@@ -18,8 +18,7 @@ class Profile extends Component {
     }
 
     handleChange (e) {
-        e.preventDefault();
-        console.log("change");
+        this.setState({value: e.target.value});
     }
 
     render () {
