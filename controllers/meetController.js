@@ -9,7 +9,7 @@ exports.postMeet = async (req, res) => {
   req.body.attendees = req.user._id;
   const meet = await new Meet(req.body).save();
   const user = User.findByIdAndUpdate(req.user._id, {
-    $push: { created: meet._id }
+    $push: { created: meet._id, meetups: meet.id }
   }).exec();
   res.json(req.body);
 };

@@ -7,13 +7,13 @@
 }
 .nav__list {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   padding: 0;
   margin: 0;
 }
 
 .nav__item {
-  flex: 1 0 250px;
+  flex: 1 1 250px;
   display: block;
   list-style-type: none;
   margin: 0 auto;

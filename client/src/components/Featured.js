@@ -6,7 +6,7 @@ const Featured = props => {
   const featured = props.meets.filter((meet, index) => index < 6);
   return (
     <section className="Featured">
-      <h1 className="Featured-title">Featured jobs</h1>
+      <h1 className="Featured-title">Featured Meetups</h1>
       <MeetList meets={featured} />
     </section>
   );
