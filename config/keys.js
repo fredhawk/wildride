@@ -1,7 +1,7 @@
-if (process.env.NODE_EN === 'production') {
+if (process.env.NODE_ENV === 'production') {
   // Get prod keys
-  module.exports = './prod.js';
+  module.exports = require('./prod.js');
 } else {
   // Get dev keys
-  module.exports = './dev.js';
+  module.exports = require('./dev.js');
 }
