@@ -9,13 +9,11 @@ const Header = props => {
         <nav className="nav">
           <ul className="nav__list">
             <li className="nav__item">
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/">Wildride</NavLink>
             </li>
             <li className="nav__item">
               {/* This link is going to link to profile */}
-              <NavLink to="/profile">
-                {props.user.name}
-              </NavLink>
+              <NavLink to="/profile">{props.user.name}</NavLink>
             </li>
             <li className="nav__item">
               <NavLink to="/" onClick={() => props.logout()}>
