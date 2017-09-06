@@ -7,8 +7,9 @@ const cors = require('cors');
 const passport = require('passport');
 const promisify = require('es6-promisify');
 const expressValidator = require('express-validator');
+const keys = require('./config/keys');
 
-mongoose.connect(process.env.DATABASE, {
+mongoose.connect(keys.DATABASE, {
   useMongoClient: true
 });
 mongoose.Promise = global.Promise;
@@ -21,7 +22,7 @@ require('./handlers/passport');
 
 const routes = require('./routes/index');
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = keys.PORT || 3001;
 
 app.use(bodyParser.json());
 app.use(
@@ -36,8 +37,8 @@ app.use(cors());
 // Need cookie stuff here
 app.use(
   session({
-    secret: process.env.SECRET,
-    key: process.env.KEY,
+    secret: keys.SECRET,
+    key: keys.KEY,
     resave: false,
     saveUninitialized: false,
     store: new MongoStore({ mongooseConnection: mongoose.connection })
@@ -54,6 +55,15 @@ app.use((req, res, next) => {
 });
 
 app.use(`/`, routes);
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+
+  const path = require('path');
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
+}
 
 const server = app.listen(PORT, () => {
   console.log('Listening on port %d in %s mode', server.address().port, app.settings.env);
