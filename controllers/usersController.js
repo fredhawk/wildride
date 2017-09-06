@@ -85,3 +85,7 @@ exports.getUser = async (req, res) => {
   // console.log(user);
   res.json(user);
 };
+
+exports.updateProfile = async (req, res) => {
+
+};

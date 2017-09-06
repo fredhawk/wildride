@@ -14,7 +14,10 @@ router.post('/api/meet/new', meetController.validateMeet, meetController.postMee
 router.post('/api/meet/attend/:id', userController.attend);
 router.post('/api/meet/unattend/:id', userController.unattend);
 
+// Signing up
 router.post('/api/register', userController.validateRegister, userController.signup, authController.login);
+// Changing profile-data
+router.post('/api/profile', userController.updateProfile);
 
 router.post('/api/login', authController.login);
 router.get('/api/logout', authController.logout);
