@@ -19,7 +19,10 @@ class Profile extends Component {
     }
 
     handleChange (e) {
-        this.setState({value: e.target.value});
+        var property = e.target.name;
+        var user = this.state.user;
+        user[property] = e.target.value;
+        this.setState({user: user});
     }
 
     render () {
@@ -28,23 +31,23 @@ class Profile extends Component {
             <form onSubmit={this.handleSubmit}>
                 <label>
                     E-Mail:
-                    <input type="text" value={this.state.user.email} onChange={this.handleChange} />
+                    <input type="text" value={this.state.user.email} onChange={this.handleChange} name="email"/>
                 </label>
                 <label>
                     Location:
-                    <input type="text" value={this.state.user.name} onChange={this.handleChange} />
+                    <input type="text" value={this.state.user.location} onChange={this.handleChange} name="location" />
                 </label>
                 <label>
                     Date of Birth:
-                    <input type="text" value={this.state.user.birth} onChange={this.handleChange} />
+                    <input type="text" value={this.state.user.birth} onChange={this.handleChange} name="birth" />
                 </label>
                 <label>
                     Description:
-                    <input type="text" value={this.state.user.descr} onChange={this.handleChange} />
+                    <input type="text" value={this.state.user.descr} onChange={this.handleChange} name="descr" />
                 </label>
                 <label>
                     Website:
-                    <input type="text" value={this.state.user.web} onChange={this.handleChange} />
+                    <input type="text" value={this.state.user.web} onChange={this.handleChange} name="web" />
                 </label>
                 <button type="submit"><i className="fa fa-check fa-lg" />Save</button>
             </form>
