@@ -34,7 +34,7 @@ class Profile extends Component {
           <div className="data-pair">
             <h4>Description:</h4>
             <div className="profile-data">
-              <p>{this.props.user.descr}</p>
+              <p>{this.props.user.description}</p>
             </div>
           </div>
           <div className="data-pair">

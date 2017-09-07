@@ -61,7 +61,7 @@ class Profile extends Component {
           {/* <input type="date" value={this.state.user.birth} onChange={this.handleChange} name="birth" /> */}
           <DatePicker dateFormat="YYYY/MM/DD" onChange={this.handleDateChange} selected={this.state.startDate} placeholderText="Click to select a date of birth" maxDate={moment()} name="birth" className="form__input"/>
           <label className="form__label">Description:</label>
-          <input type="text" value={this.state.user.descr} onChange={this.handleChange} name="descr" className="form__input"/>
+          <input type="text" value={this.state.user.description} onChange={this.handleChange} name="descr" className="form__input"/>
           <label className="form__label">Website:</label>
           <input type="text" value={this.state.user.web} onChange={this.handleChange} name="web" className="form__input" />
           <button type="submit" className="form__button">
