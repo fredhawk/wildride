@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import DayPickerInput from 'react-day-picker/DayPickerInput';
-import 'react-day-picker/lib/style.css';
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
+
+import 'react-datepicker/dist/react-datepicker.css';
 import './Profile.css';
 
 class Profile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: this.props.user
+      user: this.props.user,
+      startDate: moment()
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleDateChange = this.handleDateChange.bind(this);
   }
 
   handleSubmit(e) {
@@ -19,6 +23,7 @@ class Profile extends Component {
     const email = e.target.email.value;
     const location = e.target.location.value;
     const birth = e.target.birth.value;
+    console.log(birth);
     const descr = e.target.descr.value;
     const web = e.target.web.value;
     axios
@@ -28,7 +33,6 @@ class Profile extends Component {
       })
       .catch(err => console.error(err));
 
-    // console.log("submit");
     this.props.forRoute.history.push('/profile');
   }
 
@@ -38,7 +42,12 @@ class Profile extends Component {
     user[property] = e.target.value;
     this.setState({ user: user });
   }
-
+  handleDateChange(date) {
+    console.log(date);
+    this.setState({
+      startDate: date
+    });
+  }
   render() {
     return (
       <div className="profile-form">
@@ -48,7 +57,8 @@ class Profile extends Component {
           <label>Location:</label>
           <input type="text" value={this.state.user.location} onChange={this.handleChange} name="location" />
           <label>Date of Birth:</label>
-          <input type="date" value={this.state.user.birth} onChange={this.handleChange} name="birth" />
+          {/* <input type="date" value={this.state.user.birth} onChange={this.handleChange} name="birth" /> */}
+          <DatePicker dateFormat="YYYY/MM/DD" onChange={this.handleDateChange} selected={this.state.startDate} placeholderText="Click to select a date of birth" maxDate={moment()} name="birth" />
           <label>Description:</label>
           <input type="text" value={this.state.user.descr} onChange={this.handleChange} name="descr" />
           <label>Website:</label>
