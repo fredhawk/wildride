@@ -19,3 +19,17 @@
 .fa-pencil-square-o:hover {
     cursor: pointer;
 }
+
+/*Form component*/
+.profile-form {
+    border: 1px solid #1c75bc;
+    padding: 0 10px 10px 10px;
+}
+.profile-form label {
+    display: block;
+    margin: 10px;
+}
+.profile-form input {
+    display: block;
+    margin: 5px auto;
+}

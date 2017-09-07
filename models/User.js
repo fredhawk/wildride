@@ -19,6 +19,21 @@ const userSchema = new Schema({
     validate: [validator.isEmail, 'Invalid email address'],
     required: 'Please supply an email address'
   },
+  location: {
+    type: String,
+    trim: true
+  },
+  birth: {
+    type: Date
+  },
+  description: {
+    type: String,
+    trim: true
+  },
+  website: {
+    type: String,
+    trim: true
+  },
   created: [
     {
       type: Schema.Types.ObjectId,

@@ -7,6 +7,7 @@ import PostMeet from '../containers/PostMeet';
 import Login from '../containers/Login';
 import Meet from './Meet';
 import Profile from './Profile';
+import ProfileForm from './ProfileForm';
 
 const Main = props => {
   return (
@@ -20,6 +21,7 @@ const Main = props => {
         <Route path="/login" render={routeProps => <Login {...props} forRoute={routeProps} />} />
         <Route path="/logout" component={Home} />
         <Route path="/profile" render={routeProps => <Profile {...props} forRoute={routeProps} />} />
+        <Route path="/profile-form" render={routeProps => <ProfileForm {...props} forRoute={routeProps} />} />
       </Switch>
     </main>
   );
