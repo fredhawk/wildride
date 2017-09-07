@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import MeetAttending from './MeetAttending';
+import DayPickerInput from 'react-day-picker/DayPickerInput';
+import 'react-day-picker/lib/style.css';
 import './Profile.css';
 
 class Profile extends Component {
@@ -17,17 +18,18 @@ class Profile extends Component {
     e.preventDefault();
     const email = e.target.email.value;
     const location = e.target.location.value;
-    // const date = e.target.date.value;
+    const birth = e.target.birth.value;
     const descr = e.target.descr.value;
+    const web = e.target.web.value;
     axios
-      .post('/api/user/update', { email, location, descr })
+      .post('/api/user/update', { email, location, birth, descr, web })
       .then(response => {
         console.log(response);
       })
       .catch(err => console.error(err));
 
     // console.log("submit");
-    // this.props.forRoute.history.push('/profile');
+    this.props.forRoute.history.push('/profile');
   }
 
   handleChange(e) {
@@ -41,26 +43,16 @@ class Profile extends Component {
     return (
       <div className="profile-form">
         <form onSubmit={this.handleSubmit}>
-          <label>
-            E-Mail:
-            <input type="text" value={this.state.user.email} onChange={this.handleChange} name="email" />
-          </label>
-          <label>
-            Location:
-            <input type="text" value={this.state.user.location} onChange={this.handleChange} name="location" />
-          </label>
-          <label>
-            Date of Birth:
-            <input type="text" value={this.state.user.birth} onChange={this.handleChange} name="birth" />
-          </label>
-          <label>
-            Description:
-            <input type="text" value={this.state.user.descr} onChange={this.handleChange} name="descr" />
-          </label>
-          <label>
-            Website:
-            <input type="text" value={this.state.user.web} onChange={this.handleChange} name="web" />
-          </label>
+          <label>E-Mail:</label>
+          <input type="text" value={this.state.user.email} onChange={this.handleChange} name="email" />
+          <label>Location:</label>
+          <input type="text" value={this.state.user.location} onChange={this.handleChange} name="location" />
+          <label>Date of Birth:</label>
+          <input type="date" value={this.state.user.birth} onChange={this.handleChange} name="birth" />
+          <label>Description:</label>
+          <input type="text" value={this.state.user.descr} onChange={this.handleChange} name="descr" />
+          <label>Website:</label>
+          <input type="text" value={this.state.user.web} onChange={this.handleChange} name="web" />
           <button type="submit">
             <i className="fa fa-check fa-lg" />Save
           </button>
