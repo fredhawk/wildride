@@ -87,3 +87,8 @@ exports.getUser = async (req, res) => {
   // console.log(user);
   res.json(user);
 };
+
+exports.updateProfile = async (req, res) => {
+  const user = await User.findByIdAndUpdate(req.user._id, { email: req.body.email, location: req.body.location, birth: req.body.birth, description: req.body.descr, website: req.body.web });
+  res.send(user);
+};
