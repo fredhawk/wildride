@@ -41,6 +41,13 @@ textarea.form__input {
   padding: 1em;
 }
 
+.header {
+  font-family: 'Vidaloka', serif;
+}
+
+.text {
+  font-family: 'Overpass', sans-serif;
+}
 /* input[type="radio"] {
   display: inline;
 } */
