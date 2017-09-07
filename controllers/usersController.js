@@ -87,5 +87,7 @@ exports.getUser = async (req, res) => {
 };
 
 exports.updateProfile = async (req, res) => {
-
+  console.log(`req.user`, req.user);
+  console.log(`req.body`, req.body);
+  res.send('yay');
 };
