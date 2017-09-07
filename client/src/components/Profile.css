@@ -19,6 +19,10 @@
 .fa-pencil-square-o:hover {
     cursor: pointer;
 }
+/* Icons */
+.profile-form .fa {
+    color: white;
+}
 
 /*Form component*/
 .profile-form {
