@@ -8,13 +8,13 @@ class Profile extends Component {
     return (
       <div className="profile-container">
         <Link to="/profile-form">
-          <button onClick={this.toggleForm}>
+          <button onClick={this.toggleForm} className="form__button">
             <i className="fa fa-pencil-square-o fa-lg" /> Edit
           </button>
         </Link>
 
-        <h2 id="profile-name">{this.props.user.name}</h2>
-        <div className="profile-info">
+        <h2 id="profile-name" className="header">{this.props.user.name}</h2>
+        <div className="profile-info text">
           <div className="data-pair">
             <h4>e-Mail:</h4>
             <div className="profile-data">

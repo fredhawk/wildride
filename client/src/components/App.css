@@ -39,6 +39,7 @@ textarea.form__input {
   color: white;
   border: none;
   padding: 1em;
+  cursor: pointer;
 }
 
 .header {

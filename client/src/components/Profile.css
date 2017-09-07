@@ -20,7 +20,7 @@
     cursor: pointer;
 }
 /* Icons */
-.profile-form .fa {
+.profile-form .fa, .profile-container .fa {
     color: white;
 }
 
