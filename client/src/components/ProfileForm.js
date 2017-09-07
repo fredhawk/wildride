@@ -51,6 +51,7 @@ class Profile extends Component {
   render() {
     return (
       <div className="profile-form">
+        <h2 id="profile-name" className="header border__bottom">{this.props.user.name}</h2>
         <form onSubmit={this.handleSubmit}>
           <label className="form__label">E-Mail:</label>
           <input type="text" value={this.state.user.email} onChange={this.handleChange} name="email" className="form__input"/>
