@@ -5,8 +5,6 @@ import './Profile.css';
 
 class Profile extends Component {
   render() {
-    // formatting the date:
-    var birthDate = this.props.user.birth;
     return (
       <div className="profile-container">
         
@@ -57,9 +55,11 @@ class Profile extends Component {
 
 // format the date for better readability
 function formatDate(dateString) {
+  if (dateString){
   var shortened = dateString.slice(0, 10);
   var dateParts= shortened.split("-");
   return Number(dateParts[2]) + 1 + "." + dateParts[1] + "." + dateParts[0];
+  } else return null;
 };
 
 export default Profile;
