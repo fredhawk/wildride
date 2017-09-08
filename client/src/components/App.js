@@ -38,6 +38,16 @@ class App extends Component {
       })
       .catch(err => console.error(err));
   }
+
+  // format the date for better readability
+  static formatDate(dateString) {
+    if (dateString){
+    var shortened = dateString.slice(0, 10);
+    var dateParts= shortened.split("-");
+    return Number(dateParts[2]) + 1 + "." + dateParts[1] + "." + dateParts[0];
+    } else return null;
+  };
+  
   render() {
     return (
       <div className="App">
