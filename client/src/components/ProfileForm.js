@@ -10,9 +10,14 @@ import './Profile.css';
 class Profile extends Component {
   constructor(props) {
     super(props);
+
+    // creating the date for state.startDate: formatting + splitting every part
+    var dateArray = App.formatDate(this.props.user.birth).split(".");
+    var dateNumbers = dateArray.map( part => Number(part)); // changing type from string to number
+
     this.state = {
       user: this.props.user,
-      startDate: moment()
+      startDate: moment().date(dateNumbers[0]).month(dateNumbers[1]-1).year(dateNumbers[2])
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
