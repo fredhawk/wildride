@@ -23,17 +23,14 @@ class Profile extends Component {
     const email = e.target.email.value;
     const location = e.target.location.value;
     const birth = e.target.birth.value;
-    console.log(birth);
     const descr = e.target.descr.value;
     const web = e.target.web.value;
     axios
       .post('/api/user/update', { email, location, birth, descr, web })
       .then(response => {
-        console.log(response);
+        this.props.forRoute.history.push('/profile');
       })
       .catch(err => console.error(err));
-
-    this.props.forRoute.history.push('/profile');
   }
 
   handleChange(e) {
@@ -43,7 +40,6 @@ class Profile extends Component {
     this.setState({ user: user });
   }
   handleDateChange(date) {
-    console.log(date);
     this.setState({
       startDate: date
     });
@@ -57,7 +53,6 @@ class Profile extends Component {
           <label>Location:</label>
           <input type="text" value={this.state.user.location} onChange={this.handleChange} name="location" />
           <label>Date of Birth:</label>
-          {/* <input type="date" value={this.state.user.birth} onChange={this.handleChange} name="birth" /> */}
           <DatePicker dateFormat="YYYY/MM/DD" onChange={this.handleDateChange} selected={this.state.startDate} placeholderText="Click to select a date of birth" maxDate={moment()} name="birth" />
           <label>Description:</label>
           <input type="text" value={this.state.user.descr} onChange={this.handleChange} name="descr" />
