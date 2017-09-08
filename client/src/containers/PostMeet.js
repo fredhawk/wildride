@@ -30,7 +30,7 @@ class PostMeet extends Component {
     axios
       .post('/api/meet/new', { about, location, date, food })
       .then(response => {
-        this.props.history.push('/');
+        this.props.history.push('/profile');
       })
       .catch(err => console.error(err));
   }
