@@ -7,7 +7,6 @@ class Profile extends Component {
   render() {
     return (
       <div className="profile-container">
-        
 
         <h2 id="profile-name" className="header">{this.props.user.name}</h2>
         <div className="profile-border text">
@@ -42,11 +41,16 @@ class Profile extends Component {
             </div>
           </div>
         </div>
-        <Link to="/profile-form">
-          <button onClick={this.toggleForm} className="form__button">
-            <i className="fa fa-pencil-square-o fa-lg" /> Edit
-          </button>
-        </Link>
+        <div className="Profile__navigation">
+          <Link to="/profile-form">
+            <button onClick={this.toggleForm} className="form__button">
+              <i className="fa fa-pencil-square-o fa-lg" /> Edit profile
+            </button>
+          </Link>
+          <Link to="/meet/new">
+            <button className="form__button">Create a meetup</button>
+          </Link>
+        </div>
         <MeetAttending />
       </div>
     );

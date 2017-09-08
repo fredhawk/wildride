@@ -23,17 +23,14 @@ class Profile extends Component {
     const email = e.target.email.value;
     const location = e.target.location.value;
     const birth = e.target.birth.value;
-    console.log(birth);
     const descr = e.target.descr.value;
     const web = e.target.web.value;
     axios
       .post('/api/user/update', { email, location, birth, descr, web })
       .then(response => {
-        console.log(response);
+        this.props.forRoute.history.push('/profile');
       })
       .catch(err => console.error(err));
-
-    this.props.forRoute.history.push('/profile');
   }
 
   handleChange(e) {
@@ -43,7 +40,6 @@ class Profile extends Component {
     this.setState({ user: user });
   }
   handleDateChange(date) {
-    console.log(date);
     this.setState({
       startDate: date
     });

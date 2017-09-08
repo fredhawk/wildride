@@ -1,6 +1,6 @@
 .Header {
   width: 100%;
-  background: #1c75bc;
+  background: #23c781;
 }
 
 .nav {
@@ -24,6 +24,6 @@
   color: white;
 }
 .nav__item:hover {
-  background: #135589;
+  background: #139571;
   cursor: pointer;
 }

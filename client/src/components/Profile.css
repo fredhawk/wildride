@@ -1,23 +1,30 @@
 .profile-container {
-    text-align: left;
-    padding-left: 10%;
-    padding-right: 10%;
+  text-align: left;
+  padding-left: 10%;
+  padding-right: 10%;
 }
+
 .profile-border {
     border: 1px solid #1c75bc;
     padding: 0 10px 10px 10px;
+
+.Profile__navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
 }
 .profile-info h4 {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 .data-pair {
-    position: relative;
+  position: relative;
 }
 .fa-pencil-square-o {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 .fa-pencil-square-o:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 /* Icons */
 .profile-form .fa, .profile-container .fa {
@@ -26,14 +33,14 @@
 
 /*Form component*/
 .profile-form {
-    border: 1px solid #1c75bc;
-    padding: 0 10px 10px 10px;
+  border: 1px solid #1c75bc;
+  padding: 0 10px 10px 10px;
 }
 .profile-form label {
-    display: block;
-    margin: 10px;
+  display: block;
+  margin: 10px;
 }
 .profile-form input {
-    display: block;
-    margin: 5px auto;
+  display: block;
+  margin: 5px auto;
 }
