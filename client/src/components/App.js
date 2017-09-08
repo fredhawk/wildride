@@ -42,8 +42,8 @@ class App extends Component {
   // format the date for better readability
   static formatDate(dateString) {
     if (dateString){
-    var shortened = dateString.slice(0, 10);
-    var dateParts= shortened.split("-");
+    let shortened = dateString.slice(0, 10);
+    let dateParts= shortened.split("-");
     return Number(dateParts[2]) + 1 + "." + dateParts[1] + "." + dateParts[0];
     } else return null;
   };

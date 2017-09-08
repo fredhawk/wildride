@@ -12,8 +12,8 @@ class Profile extends Component {
     super(props);
 
     // creating the date for state.startDate: formatting + splitting every part
-    var dateArray = App.formatDate(this.props.user.birth).split(".");
-    var dateNumbers = dateArray.map( part => Number(part)); // changing type from string to number
+    let dateArray = App.formatDate(this.props.user.birth).split(".");
+    let dateNumbers = dateArray.map( part => Number(part)); // changing type from string to number
 
     this.state = {
       user: this.props.user,
