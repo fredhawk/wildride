@@ -10,7 +10,7 @@ const Hero = () => {
         <h2 className="Hero-title__see-world">Learn from each other.</h2>
         <div className="Hero-navigation">
           <Link to="/meet" className="Hero-btn">
-            Explore all Meets
+            Explore all Meetups
           </Link>
           <Link to="/register" className="Hero-btn">
             Join us
