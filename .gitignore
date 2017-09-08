@@ -76,7 +76,7 @@ typings/
 # dotenv environment variables file
 .env
 .env-remote
-dev.js
+config/dev.js
 
 
 ### VisualStudioCode ###
