@@ -29,10 +29,10 @@ class Profile extends Component {
     const email = e.target.email.value;
     const location = e.target.location.value;
     const birth = e.target.birth.value;
-    const descr = e.target.descr.value;
-    const web = e.target.web.value;
+    const description = e.target.description.value;
+    const web = e.target.website.value;
     axios
-      .post('/api/user/update', { email, location, birth, descr, web })
+      .post('/api/user/update', { email, location, birth, description, web })
       .then(response => {
         this.props.forRoute.history.push('/profile');
       })
@@ -63,9 +63,9 @@ class Profile extends Component {
           {/* <input type="date" value={this.state.user.birth} onChange={this.handleChange} name="birth" /> */}
           <DatePicker dateFormat="YYYY/MM/DD" onChange={this.handleDateChange} selected={this.state.startDate} placeholderText="Click to select a date of birth" maxDate={moment()} name="birth" className="form__input"/>
           <label className="form__label">Description:</label>
-          <input type="text" value={this.state.user.description} onChange={this.handleChange} name="descr" className="form__input"/>
+          <input type="text" value={this.state.user.description} onChange={this.handleChange} name="description" className="form__input"/>
           <label className="form__label">Website:</label>
-          <input type="text" value={this.state.user.web} onChange={this.handleChange} name="web" className="form__input" />
+          <input type="text" value={this.state.user.website} onChange={this.handleChange} name="website" className="form__input" />
           <button type="submit" className="form__button">
             <i className="fa fa-check fa-lg" />Save
           </button>
