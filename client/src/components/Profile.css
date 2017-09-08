@@ -5,14 +5,13 @@
 }
 
 .profile-border {
-    border: 1px solid #1c75bc;
-    padding: 0 10px 10px 10px;
-
+  border: 1px solid #1c75bc;
+  padding: 0 10px 10px 10px;
+}
 .Profile__navigation {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-
 }
 .profile-info h4 {
   margin-bottom: 0;
@@ -27,8 +26,9 @@
   cursor: pointer;
 }
 /* Icons */
-.profile-form .fa, .profile-container .fa {
-    color: white;
+.profile-form .fa,
+.profile-container .fa {
+  color: white;
 }
 
 /*Form component*/
