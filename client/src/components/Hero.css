@@ -1,0 +1,81 @@
+.Hero {
+  min-height: 90vh;
+  background-color: #23c781;
+  color: white;
+  font-size: 13px;
+  padding-top: 10px;
+  /* background-image: url(https://unsplash.it/2200/1500/?image=800);
+  background-repeat: no-repeat;
+  background-position: center; */
+}
+@media (min-width: 480px) {
+  .Hero {
+    padding-top: 100px;
+    font-size: 16px;
+  }
+}
+
+.Hero-wrapper {
+  height: 100%;
+}
+
+.Hero-title {
+  font-size: 3em;
+  font-weight: 200;
+  line-height: 2em;
+}
+
+.Hero-title__see-world {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 2em;
+}
+
+.Hero-navigation {
+  margin-bottom: 3em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.Hero-btn {
+  background-color: #1def89;
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+  padding: 20px 32px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-weight: 400;
+  font-size: 0.9em;
+  line-height: 2em;
+  box-shadow: 0 10px 10px 0 rgba(8, 57, 96, 0.15);
+  display: block;
+  width: 250px;
+}
+
+a.Hero-btn {
+  color: white;
+}
+
+.Hero-tagline {
+  font-size: 1.1em;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 90%;
+}
+
+.Hero-availability {
+  margin-top: 280px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 2.2em;
+  font-weight: 300;
+  line-height: 2em;
+  width: 90%;
+  max-width: 580px;
+}
