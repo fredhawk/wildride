@@ -3,15 +3,16 @@
   padding-left: 10%;
   padding-right: 10%;
 }
-.profile-info {
-  border: 1px solid #1c75bc;
-  padding: 0 10px 10px 10px;
-  margin-bottom: 2em;
-}
+
+.profile-border {
+    border: 1px solid #1c75bc;
+    padding: 0 10px 10px 10px;
+
 .Profile__navigation {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+
 }
 .profile-info h4 {
   margin-bottom: 0;
@@ -24,6 +25,10 @@
 }
 .fa-pencil-square-o:hover {
   cursor: pointer;
+}
+/* Icons */
+.profile-form .fa, .profile-container .fa {
+    color: white;
 }
 
 /*Form component*/

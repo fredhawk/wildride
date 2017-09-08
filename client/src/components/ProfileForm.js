@@ -47,17 +47,19 @@ class Profile extends Component {
   render() {
     return (
       <div className="profile-form">
+        <h2 id="profile-name" className="header border__bottom">{this.props.user.name}</h2>
         <form onSubmit={this.handleSubmit}>
-          <label>E-Mail:</label>
-          <input type="text" value={this.state.user.email} onChange={this.handleChange} name="email" />
-          <label>Location:</label>
-          <input type="text" value={this.state.user.location} onChange={this.handleChange} name="location" />
-          <label>Date of Birth:</label>
-          <DatePicker dateFormat="YYYY/MM/DD" onChange={this.handleDateChange} selected={this.state.startDate} placeholderText="Click to select a date of birth" maxDate={moment()} name="birth" />
-          <label>Description:</label>
-          <input type="text" value={this.state.user.descr} onChange={this.handleChange} name="descr" />
-          <label>Website:</label>
-          <input type="text" value={this.state.user.web} onChange={this.handleChange} name="web" />
+          <label className="form__label">E-Mail:</label>
+          <input type="text" value={this.state.user.email} onChange={this.handleChange} name="email" className="form__input"/>
+          <label className="form__label">Location:</label>
+          <input type="text" value={this.state.user.location} onChange={this.handleChange} name="location" className="form__input"/>
+          <label className="form__label">Date of Birth:</label>
+          {/* <input type="date" value={this.state.user.birth} onChange={this.handleChange} name="birth" /> */}
+          <DatePicker dateFormat="YYYY/MM/DD" onChange={this.handleDateChange} selected={this.state.startDate} placeholderText="Click to select a date of birth" maxDate={moment()} name="birth" className="form__input"/>
+          <label className="form__label">Description:</label>
+          <input type="text" value={this.state.user.description} onChange={this.handleChange} name="descr" className="form__input"/>
+          <label className="form__label">Website:</label>
+          <input type="text" value={this.state.user.web} onChange={this.handleChange} name="web" className="form__input" />
           <button type="submit" className="form__button">
             <i className="fa fa-check fa-lg" />Save
           </button>
