@@ -58,7 +58,7 @@ class Profile extends Component {
           <input type="text" value={this.state.user.descr} onChange={this.handleChange} name="descr" />
           <label>Website:</label>
           <input type="text" value={this.state.user.web} onChange={this.handleChange} name="web" />
-          <button type="submit">
+          <button type="submit" className="form__button">
             <i className="fa fa-check fa-lg" />Save
           </button>
         </form>

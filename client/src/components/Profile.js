@@ -7,12 +7,6 @@ class Profile extends Component {
   render() {
     return (
       <div className="profile-container">
-        <Link to="/profile-form">
-          <button onClick={this.toggleForm}>
-            <i className="fa fa-pencil-square-o fa-lg" /> Edit
-          </button>
-        </Link>
-
         <h2 id="profile-name">{this.props.user.name}</h2>
         <div className="profile-info">
           <div className="data-pair">
@@ -45,6 +39,16 @@ class Profile extends Component {
               <p>{this.props.user.web}</p>
             </div>
           </div>
+        </div>
+        <div className="Profile__navigation">
+          <Link to="/profile-form">
+            <button onClick={this.toggleForm} className="form__button">
+              <i className="fa fa-pencil-square-o fa-lg" /> Edit profile
+            </button>
+          </Link>
+          <Link to="/meet/new">
+            <button className="form__button">Create a meetup</button>
+          </Link>
         </div>
         <MeetAttending />
       </div>
