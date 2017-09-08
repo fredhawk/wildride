@@ -22,10 +22,10 @@ class Home extends Component {
   }
   render() {
     return (
-      <main>
+      <div>
         <Hero />
         {!this.state.meets ? `Loading...` : <Featured meets={this.state.meets} />}
-      </main>
+      </div>
     );
   }
 }
