@@ -1,0 +1,58 @@
+.App {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.form {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 auto;
+  max-width: 85%;
+}
+@media (min-width: 600px) {
+  .form {
+    max-width: 450px;
+  }
+}
+.form__label {
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+}
+.form__input {
+  margin-bottom: 1em;
+  border: 1px solid #234976;
+  padding: 0.5em;
+  border-radius: 3px;
+  font-size: 1.4em;
+}
+.form__input::placeholder {
+  color: #dedcdc;
+}
+
+textarea.form__input {
+  resize: none;
+  height: 150px;
+}
+
+.form__button {
+  background: #2569ba;
+  color: white;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.header {
+  font-family: 'Vidaloka', serif;
+}
+
+.text {
+  font-family: 'Overpass', sans-serif;
+}
+.border__bottom {
+  border-bottom: 1px solid #1c75bc;
+  padding-bottom: 10px;
+}
+/* input[type="radio"] {
+  display: inline;
+} */
