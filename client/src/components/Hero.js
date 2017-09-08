@@ -6,24 +6,19 @@ const Hero = () => {
   return (
     <section className="Hero">
       <div className="Hero-wrapper">
-        <div className="Hero-container">
-          <h1 className="Hero-title">Travel. Work.</h1>
-          <h2 className="Hero-title__see-world">See the world</h2>
-          <div className="Hero-navigation">
-            <Link to="/meet" className="Hero-btn Hero-btn-explore">
-              Explore all Meets
-            </Link>
-            <Link to="/meet/new" className="Hero-btn Hero-btn-explore">
-              Post a meet
-            </Link>
-          </div>
-          <div className="Hero-tagline">Use Jobbatical to fin a tech, business or creative job abroad.</div>
+        {/* <div className="Hero-container"> */}
+        <h1 className="Hero-title">Meet and get to know other developers.</h1>
+        <h2 className="Hero-title__see-world">Learn from each other.</h2>
+        <div className="Hero-navigation">
+          <Link to="/meet" className="Hero-btn">
+            Explore all Meets
+          </Link>
+          <Link to="/register" className="Hero-btn">
+            Join us
+          </Link>
         </div>
-        <div>
-          <p className="Hero-availability">
-            Currently <strong> 48 teams </strong> in <strong>27 countries</strong> could use your help
-          </p>
-        </div>
+        <div className="Hero-tagline">Use Wildride to connect with other developers.</div>
+        {/* </div> */}
       </div>
     </section>
   );
