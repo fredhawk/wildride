@@ -30,9 +30,10 @@ class Profile extends Component {
     const location = e.target.location.value;
     const birth = e.target.birth.value;
     const description = e.target.description.value;
+    const food = e.target.food.value;
     const web = e.target.website.value;
     axios
-      .post('/api/user/update', { email, location, birth, description, web })
+      .post('/api/user/update', { email, location, birth, description, food, web })
       .then(response => {
         this.props.forRoute.history.push('/profile');
       })
