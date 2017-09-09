@@ -64,6 +64,14 @@ class Profile extends Component {
           <DatePicker dateFormat="YYYY/MM/DD" onChange={this.handleDateChange} selected={this.state.startDate} placeholderText="Click to select a date of birth" maxDate={moment()} name="birth" className="form__input"/>
           <label className="form__label">Description:</label>
           <input type="text" value={this.state.user.description} onChange={this.handleChange} name="description" className="form__input"/>
+          <label className="form__label">Food Preferences:</label>
+          <input type="select" name="food">
+            <option value="I eat everything">I eat everything</option>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Vegan">Vegan</option>
+            <option value="Low Carb">Low Carb</option>
+            <option value="No dairy">No dairy</option>
+          </input>
           <label className="form__label">Website:</label>
           <input type="text" value={this.state.user.website} onChange={this.handleChange} name="website" className="form__input" />
           <button type="submit" className="form__button">
