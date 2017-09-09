@@ -36,6 +36,12 @@ class Profile extends Component {
             </div>
           </div>
           <div className="data-pair">
+            <h4>Food Preferences:</h4>
+            <div className="profile-data">
+              <p>{this.props.user.food}</p>
+            </div>
+          </div>
+          <div className="data-pair">
             <h4>Website:</h4>
             <div className="profile-data">
               <p>{this.props.user.website}</p>
