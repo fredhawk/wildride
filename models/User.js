@@ -34,6 +34,10 @@ const userSchema = new Schema({
     type: String,
     trim: true
   },
+  food: {
+    type: String,
+    trim: true
+  },
   created: [
     {
       type: Schema.Types.ObjectId,
