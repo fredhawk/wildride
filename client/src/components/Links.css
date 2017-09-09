@@ -26,6 +26,9 @@
 .link-list a {
   color: #999;
 }
+.link-list a:hover {
+  color: #111;
+}
 
 .social-media-text {
   display: none;
