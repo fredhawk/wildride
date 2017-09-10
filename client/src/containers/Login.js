@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Register from './Register';
 
 class Login extends Component {
   state = {
@@ -30,21 +31,26 @@ class Login extends Component {
   }
   render() {
     return (
-      <section className="Login">
-        <h1 className="Login__title">Login</h1>
-        {this.state.login ? '' : 'Wrong email or password. Please try again!'}
-        <form className="form Login__form" onSubmit={e => this.handleSubmit(e)}>
-          <label className="form__label" htmlFor="email">
-            Email
-          </label>
-          <input type="email" className="form__input" name="email" required />
-          <label className="form__label" htmlFor="password">
-            Password
-          </label>
-          <input type="password" className="form__input" name="password" required />
-          <input type="submit" className="form__button" defaultValue="Log in" />
-        </form>
-      </section>
+      <div>
+        <section className="Login">
+          <h1 className="Login__title">Login</h1>
+          {this.state.login ? '' : 'Wrong email or password. Please try again!'}
+          <form className="form Login__form" onSubmit={e => this.handleSubmit(e)}>
+            <label className="form__label" htmlFor="email">
+              Email
+            </label>
+            <input type="email" className="form__input" name="email" required />
+            <label className="form__label" htmlFor="password">
+              Password
+            </label>
+            <input type="password" className="form__input" name="password" required />
+            <input type="submit" className="form__button" defaultValue="Log in" />
+          </form>
+        </section>
+        <hr />
+        <h2>Not a member?</h2>
+        <Register />
+      </div>
     );
   }
 }
