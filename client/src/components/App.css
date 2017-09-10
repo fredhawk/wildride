@@ -25,6 +25,7 @@
   border-radius: 3px;
   font-size: 1.4em;
 }
+
 .form__input::placeholder {
   color: #dedcdc;
 }

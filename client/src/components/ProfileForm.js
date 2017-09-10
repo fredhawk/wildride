@@ -55,7 +55,7 @@ class Profile extends Component {
     return (
       <div className="profile-form">
         <h2 id="profile-name" className="header border__bottom">{this.props.user.name}</h2>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className="text">
           <label className="form__label">E-Mail:</label>
           <input type="text" value={this.state.user.email} onChange={this.handleChange} name="email" className="form__input"/>
           <label className="form__label">Location:</label>
@@ -64,7 +64,7 @@ class Profile extends Component {
           {/* <input type="date" value={this.state.user.birth} onChange={this.handleChange} name="birth" /> */}
           <DatePicker dateFormat="YYYY/MM/DD" onChange={this.handleDateChange} selected={this.state.startDate} placeholderText="Click to select a date of birth" maxDate={moment()} name="birth" className="form__input"/>
           <label className="form__label">Description:</label>
-          <input type="text" value={this.state.user.description} onChange={this.handleChange} name="description" className="form__input form__input__big"/>
+          <textarea value={this.state.user.description} onChange={this.handleChange} name="description" className="form__input text"></textarea>
           <label className="form__label">Food Preferences:</label>
           <select name="food" value={this.state.user.food ? this.state.user.food : "I eat everything"} onChange={this.handleChange} className="form__input">
             <option value="I eat everything">I eat everything</option>
