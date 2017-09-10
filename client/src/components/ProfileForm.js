@@ -66,13 +66,13 @@ class Profile extends Component {
           <label className="form__label">Description:</label>
           <input type="text" value={this.state.user.description} onChange={this.handleChange} name="description" className="form__input"/>
           <label className="form__label">Food Preferences:</label>
-          <input type="select" name="food">
+          <select name="food" value={this.state.user.food ? this.state.user.food : "I eat everything"} onChange={this.handleChange}>
             <option value="I eat everything">I eat everything</option>
             <option value="Vegetarian">Vegetarian</option>
             <option value="Vegan">Vegan</option>
             <option value="Low Carb">Low Carb</option>
             <option value="No dairy">No dairy</option>
-          </input>
+          </select>
           <label className="form__label">Website:</label>
           <input type="text" value={this.state.user.website} onChange={this.handleChange} name="website" className="form__input" />
           <button type="submit" className="form__button">
