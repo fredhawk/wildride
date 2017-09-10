@@ -60,11 +60,11 @@ class Profile extends Component {
           <input type="text" value={this.state.user.email} onChange={this.handleChange} name="email" className="form__input"/>
           <label className="form__label">Location:</label>
           <input type="text" value={this.state.user.location} onChange={this.handleChange} name="location" className="form__input"/>
+          <label className="form__label">Website:</label>
+          <input type="text" value={this.state.user.website} onChange={this.handleChange} name="website" className="form__input" />
           <label className="form__label">Date of Birth:</label>
           {/* <input type="date" value={this.state.user.birth} onChange={this.handleChange} name="birth" /> */}
           <DatePicker dateFormat="YYYY/MM/DD" onChange={this.handleDateChange} selected={this.state.startDate} placeholderText="Click to select a date of birth" maxDate={moment()} name="birth" className="form__input"/>
-          <label className="form__label">Description:</label>
-          <textarea value={this.state.user.description} onChange={this.handleChange} name="description" className="form__input text"></textarea>
           <label className="form__label">Food Preferences:</label>
           <select name="food" value={this.state.user.food ? this.state.user.food : "I eat everything"} onChange={this.handleChange} className="form__input">
             <option value="I eat everything">I eat everything</option>
@@ -73,8 +73,8 @@ class Profile extends Component {
             <option value="Low Carb">Low Carb</option>
             <option value="No dairy">No dairy</option>
           </select>
-          <label className="form__label">Website:</label>
-          <input type="text" value={this.state.user.website} onChange={this.handleChange} name="website" className="form__input" />
+          <label className="form__label">Description:</label>
+          <textarea value={this.state.user.description} onChange={this.handleChange} name="description" className="form__input text" placeholder="A short description about yourself"></textarea><br />
           <button type="submit" className="form__button">
             <i className="fa fa-check fa-lg" />Save
           </button>
