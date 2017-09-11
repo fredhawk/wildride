@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Register from './Register';
+import { Link } from 'react-router-dom';
+import './Login.css';
 
 class Login extends Component {
   state = {
@@ -49,7 +50,11 @@ class Login extends Component {
         </section>
         <hr />
         <h2>Not a member?</h2>
-        <Register />
+        <div className="Login__btn">
+          <Link to="/register" className="Hero-btn">
+            Sign up
+          </Link>
+        </div>
       </div>
     );
   }
