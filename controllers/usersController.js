@@ -81,14 +81,22 @@ exports.getMeetup = async (req, res) => {
 };
 
 exports.getUser = async (req, res) => {
-  //Get user from the user´part of the database
-  // const user = await User.find({ _id: req.params.id })
-  // Send back user data
-  // console.log(user);
-  res.json(user);
+  res.send(req.user);
 };
 
 exports.updateProfile = async (req, res) => {
-  const user = await User.findByIdAndUpdate(req.user._id, { email: req.body.email, location: req.body.location, birth: req.body.birth, description: req.body.description, website: req.body.web });
+  const user = await User.findByIdAndUpdate(
+    req.user._id,
+    {
+      email: req.body.email,
+      location: req.body.location,
+      birth: req.body.birth,
+      description: req.body.description,
+      website: req.body.web
+    },
+    {
+      new: true
+    }
+  ).exec();
   res.send(user);
 };
