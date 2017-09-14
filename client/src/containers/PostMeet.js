@@ -42,11 +42,11 @@ class PostMeet extends Component {
           <label htmlFor="about" className="form__label PostMeet__label">
             Meet is about...
           </label>
-          <input type="text" className="form__input PostMeet__input" name="about" placeholder="Data structures" />
+          <input type="text" className="form__input PostMeet__input" name="about" placeholder="Data structures" required />
           <label htmlFor="location" className="form__label PostMeet__label">
             Where is the meet?
           </label>
-          <input type="text" className="form__input PostMeet__input" name="location" placeholder="Joes bar, Berlin, Germany" />
+          <input type="text" className="form__input PostMeet__input" name="location" placeholder="Joes bar, Berlin, Germany" required />
           <label htmlFor="date" className=" form__label PostMeet__label">
             When is the meet?
           </label>
