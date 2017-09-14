@@ -22,8 +22,7 @@ const meetSchema = new Schema({
   },
   author: {
     type: mongoose.Schema.ObjectId,
-    ref: 'User',
-    required: 'You must supply an author!'
+    ref: 'User'
   },
   attendees: {
     type: [mongoose.Schema.ObjectId],
