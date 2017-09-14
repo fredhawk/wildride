@@ -15,3 +15,7 @@ a:hover,
 a:active {
   color: black;
 }
+
+section {
+  margin-bottom: 2em;
+}
