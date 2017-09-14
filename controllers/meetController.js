@@ -18,10 +18,15 @@ exports.postMeet = async (req, res) => {
 };
 
 exports.getMeets = async (req, res) => {
-  // Get meets from the meet part of the database
-  const meets = await Meet.find().sort({ created: 'desc' });
-  // Send back the meets to the client
-  res.json(meets);
+  try {
+    // Get meets from the meet part of the database
+    const meets = await Meet.find().sort({ created: 'desc' });
+    // Send back the meets to the client
+    res.json(meets);
+  } catch (error) {
+    console.error(error);
+    res.status(400).send(error);
+  }
 };
 
 exports.getSingleMeet = async (req, res) => {
