@@ -24,39 +24,50 @@ exports.getMeets = async (req, res) => {
     // Send back the meets to the client
     res.json(meets);
   } catch (error) {
-    console.error(error);
     res.status(400).send(error);
   }
 };
 
 exports.getSingleMeet = async (req, res) => {
-  const meet = await Meet.find({ _id: req.params.id });
-  res.send(meet[0]);
+  try {
+    const meet = await Meet.find({ _id: req.params.id });
+    res.send(meet[0]);
+  } catch (error) {
+    res.status(400).send(error);
+  }
 };
 
 exports.attend = async (req, res) => {
-  const meet = await Meet.findByIdAndUpdate(
-    req.params.id,
-    {
-      $push: { attendees: req.user._id }
-    },
-    {
-      new: true
-    }
-  ).exec();
-  res.send(meet);
+  try {
+    const meet = await Meet.findByIdAndUpdate(
+      req.params.id,
+      {
+        $push: { attendees: req.user._id }
+      },
+      {
+        new: true
+      }
+    ).exec();
+    res.send(meet);
+  } catch (error) {
+    res.status(400).send(error);
+  }
 };
 exports.unattend = async (req, res) => {
-  const meet = await Meet.findByIdAndUpdate(
-    req.params.id,
-    {
-      $pull: { attendees: req.user._id }
-    },
-    {
-      new: true
-    }
-  ).exec();
-  res.send(meet);
+  try {
+    const meet = await Meet.findByIdAndUpdate(
+      req.params.id,
+      {
+        $pull: { attendees: req.user._id }
+      },
+      {
+        new: true
+      }
+    ).exec();
+    res.send(meet);
+  } catch (error) {
+    res.status(400).send(error);
+  }
 };
 
 exports.validateMeet = (err, req, res, next) => {
