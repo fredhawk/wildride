@@ -4,14 +4,17 @@ const Meet = mongoose.model('Meet');
 const User = mongoose.model('User');
 
 exports.postMeet = async (req, res) => {
-  req.body.author = req.user._id;
-
-  req.body.attendees = req.user._id;
-  const meet = await new Meet(req.body).save();
-  const user = User.findByIdAndUpdate(req.user._id, {
-    $push: { created: meet._id, meetups: meet.id }
-  }).exec();
-  res.json(req.body);
+  try {
+    req.body.author = req.user._id;
+    req.body.attendees = req.user._id;
+    const meet = await new Meet(req.body).save();
+    const user = User.findByIdAndUpdate(req.user._id, {
+      $push: { created: meet._id, meetups: meet.id }
+    }).exec();
+    res.send(req.body);
+  } catch (error) {
+    res.status(400).send(error);
+  }
 };
 
 exports.getMeets = async (req, res) => {
@@ -51,15 +54,13 @@ exports.unattend = async (req, res) => {
   res.send(meet);
 };
 
-exports.validateMeet = async (req, res, next) => {
+exports.validateMeet = (err, req, res, next) => {
   req.sanitizeBody('about');
   req.checkBody('about', 'You must supply a about!').notEmpty();
   req.sanitizeBody('location');
   req.checkBody('location', 'That location is not valid!').notEmpty();
-
   const errors = req.validationErrors();
   if (errors) {
-    // Stop it from running further
     return;
   }
   next();
