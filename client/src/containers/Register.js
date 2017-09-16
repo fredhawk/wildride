@@ -15,7 +15,7 @@ class Register extends Component {
         // call a function that changes the header
         this.props.handleUserInfo(response.data);
         // This should route to profile later
-        this.props.forRoute.history.push('/');
+        this.props.forRoute.history.push('/profile');
       })
       .catch(err => {
         // Something went wrong with the registration

@@ -20,7 +20,7 @@ class Login extends Component {
         });
         this.props.handleUserInfo(response.data);
         // This should route to profile later
-        this.props.forRoute.history.push('/profile');
+        this.props.forRoute.history.push('/');
       })
       .catch(err => {
         // send person to login screen as login failed.
