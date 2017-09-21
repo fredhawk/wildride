@@ -12,7 +12,7 @@ const MeetListItem = props => {
         <div className="MeetListItem__content">
           <div className="MeetListItem__info">
             <h3 className="MeetListItem__title">{title}</h3>
-            <p className="MeetListItem__description">At {description}</p>
+            <p className="MeetListItem__description">{description}</p>
             <p className="MeetListItem__location">At {location}</p>
             <p className="MeetListItem__datetime">Will food be served? {food ? 'Yes' : 'No'}</p>
           </div>
