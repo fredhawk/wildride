@@ -4,9 +4,9 @@ mongoose.Promise = global.Promise;
 const validator = require('validator');
 
 const meetSchema = new Schema({
-  about: {
+  title: {
     type: String,
-    required: 'The meet needs to be about something.'
+    required: 'The meet needs to have a title.'
   },
   location: {
     type: String,
@@ -15,6 +15,10 @@ const meetSchema = new Schema({
   date: {
     type: Date,
     required: 'Please provide a date for the meet.'
+  },
+  description: {
+    type: String,
+    required: 'Please write a short description what the meetup is about.'
   },
   food: {
     type: Boolean,
