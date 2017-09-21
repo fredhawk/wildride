@@ -8,9 +8,12 @@ class Meet extends Component {
     meet: null
   };
   componentDidMount() {
-    axios.get(`/api/meet/${this.props.forRoute.match.params.id}`).then(meet => {
-      this.setState({ meet });
-    });
+    axios
+      .get(`/api/meet/${this.props.forRoute.match.params.id}`)
+      .then(meet => {
+        this.setState({ meet });
+      })
+      .catch(err => console.error(err));
   }
 
   attendClick() {
@@ -37,6 +40,7 @@ class Meet extends Component {
 
   renderContent() {
     const { location, title, description, food, date, attendees } = this.state.meet.data;
+
     const formatedDate = distanceInWordsToNow(date);
     return (
       <article className="Meet">
