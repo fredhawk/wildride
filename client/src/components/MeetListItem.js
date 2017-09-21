@@ -3,7 +3,7 @@ import './MeetListItem.css';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 
 const MeetListItem = props => {
-  const { _id, about, location, food, date } = props.meet;
+  const { _id, title, description, location, food, date } = props.meet;
   const formatedDate = distanceInWordsToNow(date);
 
   return (
@@ -11,7 +11,8 @@ const MeetListItem = props => {
       <a href={`/meet/${_id}`} className="MeetListItem__link">
         <div className="MeetListItem__content">
           <div className="MeetListItem__info">
-            <h3 className="MeetListItem__about">{about}</h3>
+            <h3 className="MeetListItem__title">{title}</h3>
+            <p className="MeetListItem__description">At {description}</p>
             <p className="MeetListItem__location">At {location}</p>
             <p className="MeetListItem__datetime">Will food be served? {food ? 'Yes' : 'No'}</p>
           </div>
