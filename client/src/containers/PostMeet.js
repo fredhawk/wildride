@@ -13,6 +13,7 @@ class PostMeet extends Component {
       startDate: moment()
     };
     this.handleChange = this.handleChange.bind(this);
+    this.toggleBlock = this.toggleBlock.bind(this);
   }
 
   handleChange(date) {
@@ -25,14 +26,23 @@ class PostMeet extends Component {
     const about = e.target.about.value;
     const location = e.target.location.value;
     const date = e.target.date.value;
-
     const food = e.target.food.checked;
-    axios
+    let food_types = [];
+    if (food) {
+      e.target.food__preferences.forEach( type => {
+        if (type.checked) food_types.push(type.value);
+      }) // todo: send food_types to DB
+    }
+   /* axios
       .post('/api/meet/new', { about, location, date, food })
       .then(response => {
         this.props.history.push('/profile');
       })
-      .catch(err => console.error(err));
+      .catch(err => console.error(err));*/
+      console.log(food_types);
+  }
+  toggleBlock(e) {
+    console.log(e.target.value)
   }
   render() {
     return (
@@ -55,7 +65,16 @@ class PostMeet extends Component {
             <label htmlFor="food" className="form__label PostMeet__label">
               Please check if food will be served
             </label>
-            <input type="checkbox" className="form__input PostMeet__input--checkbox" name="food" value="true" />
+            <input type="checkbox" className="form__input PostMeet__input--checkbox" name="food" value="true" onChange={this.toggleBlock}/>
+          </div>
+          <div className="form__block">
+            <label htmlFor="food__preferences" className="form__label PostMeet__label">
+              Which kind of food will you serve?
+            </label>
+            <input type="checkbox" className="form__input PostMeet__input--checkbox" name="food__preferences" value="Vegan" onChange={this.handleCheck}/> Vegan
+            <input type="checkbox" className="form__input PostMeet__input--checkbox" name="food__preferences" value="Vegetarian" onChange={this.handleCheck}/> Vegetarian
+            <input type="checkbox" className="form__input PostMeet__input--checkbox" name="food__preferences" value="Low Carb" onChange={this.handleCheck}/> Low Carb
+            <input type="checkbox" className="form__input PostMeet__input--checkbox" name="food__preferences" value="No dairy" onChange={this.handleCheck}/> No dairy
           </div>
           <input type="submit" className="form__button" defaultValue="Set up a meet" />
         </form>
