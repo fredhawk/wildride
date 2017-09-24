@@ -8,9 +8,12 @@ class Meet extends Component {
     meet: null
   };
   componentDidMount() {
-    axios.get(`/api/meet/${this.props.forRoute.match.params.id}`).then(meet => {
-      this.setState({ meet });
-    });
+    axios
+      .get(`/api/meet/${this.props.forRoute.match.params.id}`)
+      .then(meet => {
+        this.setState({ meet });
+      })
+      .catch(err => console.error(err));
   }
 
   attendClick() {
@@ -36,13 +39,18 @@ class Meet extends Component {
   }
 
   renderContent() {
-    const { location, about, food, date, attendees } = this.state.meet.data;
+    const { location, title, description, food, date, attendees } = this.state.meet.data;
+
     const formatedDate = distanceInWordsToNow(date);
     return (
       <article className="Meet">
         <h2 className="Meet__title">
-          Details for meetup about <span className="Meet__item--info">{about}</span>
+          Meetup Title <span className="Meet__item--info">{title}</span>
         </h2>
+        <div className="Meet__item">
+          <h3>Meet is about</h3>
+          <p className="Meet__item--info">{description}</p>
+        </div>
         <div className="Meet__item">
           <h3>
             Meet is at <span className="Meet__item--info">{location}</span>

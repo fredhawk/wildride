@@ -22,13 +22,14 @@ class PostMeet extends Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    const about = e.target.about.value;
+    const title = e.target.title.value;
+    const description = e.target.description.value;
     const location = e.target.location.value;
     const date = e.target.date.value;
 
     const food = e.target.food.checked;
     axios
-      .post('/api/meet/new', { about, location, date, food })
+      .post('/api/meet/new', { title, description, location, date, food })
       .then(response => {
         this.props.history.push('/profile');
       })
@@ -39,10 +40,14 @@ class PostMeet extends Component {
       <section className="PostMeet">
         <h2 className="PostMeet__title">Post a new meet up!</h2>
         <form className="form" onSubmit={e => this.handleSubmit(e)}>
-          <label htmlFor="about" className="form__label PostMeet__label">
-            Meet is about...
+          <label htmlFor="title" className="form__label PostMeet__label">
+            Title
           </label>
-          <input type="text" className="form__input PostMeet__input" name="about" placeholder="Data structures" required />
+          <input type="text" className="form__input PostMeet__input" name="title" placeholder="Data structures" required />
+          <label htmlFor="description" className="form__label PostMeet__label">
+            Description
+          </label>
+          <input type="text" className="form__input PostMeet__input" name="description" placeholder="Data structures" required />
           <label htmlFor="location" className="form__label PostMeet__label">
             Where is the meet?
           </label>
