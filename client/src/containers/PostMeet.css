@@ -1,3 +1,9 @@
 .PostMeet__input--radio {
   display: inline block;
 }
+.block_hidden {
+  display: none;
+}
+.block_visible {
+  display: block;
+}
