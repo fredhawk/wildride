@@ -22,7 +22,7 @@ const meetSchema = new Schema({
   },
   food_types: {
     type: [String]
-  }
+  },
   author: {
     type: mongoose.Schema.ObjectId,
     ref: 'User',
