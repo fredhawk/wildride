@@ -32,7 +32,7 @@ class PostMeet extends Component {
     if (food) {
       e.target.food__preferences.forEach( type => {
         if (type.checked) food_types.push(type.value);
-      }) // todo: send food_types to DB
+      })
     }
     axios
       .post('/api/meet/new', { about, location, date, food, food_types })
@@ -40,7 +40,7 @@ class PostMeet extends Component {
         this.props.history.push('/profile');
       })
       .catch(err => console.error(err));
-      console.log(food_types);
+      //console.log(food_types);
   }
   toggleBlock(e) { // Toggle food-preferences block
     if (this.state.blockClass === 'block_hidden'){
