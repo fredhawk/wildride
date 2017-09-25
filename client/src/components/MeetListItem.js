@@ -3,7 +3,7 @@ import './MeetListItem.css';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 
 const MeetListItem = props => {
-  const { _id, about, location, food, date } = props.meet;
+  const { _id, about, location, food, date, food_types } = props.meet;
   const formatedDate = distanceInWordsToNow(date);
 
   return (
@@ -14,6 +14,7 @@ const MeetListItem = props => {
             <h3 className="MeetListItem__about">{about}</h3>
             <p className="MeetListItem__location">At {location}</p>
             <p className="MeetListItem__datetime">Will food be served? {food ? 'Yes' : 'No'}</p>
+            <p className="MeetListItem__food__preferences">{ food_types[0] ? `Food: ${food_types.join(", ")}` : "" }</p>
           </div>
           <footer className="MeetListItem__footer">
             <div className="MeetListItem__footer--apply">
