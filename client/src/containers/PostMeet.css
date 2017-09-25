@@ -7,3 +7,12 @@
 .block_visible {
   display: block;
 }
+.block__label {
+  display: block;
+}
+.PostMeet__input--checkbox {
+  margin-left: 20px;
+}
+.PostMeet__input--checkbox:hover{
+  color: #12a45c;
+ }

@@ -77,11 +77,11 @@ class PostMeet extends Component {
             <input type="checkbox" className="form__input PostMeet__input--checkbox" name="food" value="true" onChange={this.toggleBlock}/>
           </div>
           <div className={this.state.blockClass}>
-            <label htmlFor="food__preferences" className="form__label PostMeet__label">
+            <label htmlFor="food__preferences" className="form__label PostMeet__label block__label">
               Which kind of food will you serve?
             </label>
             <input type="checkbox" className="form__input PostMeet__input--checkbox" name="food__preferences" value="Vegan" onChange={this.handleCheck}/> Vegan
-            <input type="checkbox" className="form__input PostMeet__input--checkbox" name="food__preferences" value="Vegetarian" onChange={this.handleCheck}/> Vegetarian
+            <input type="checkbox" className="form__input PostMeet__input--checkbox" name="food__preferences" value="Vegetarian" onChange={this.handleCheck}/> Vegetarian <br />
             <input type="checkbox" className="form__input PostMeet__input--checkbox" name="food__preferences" value="Low Carb" onChange={this.handleCheck}/> Low Carb
             <input type="checkbox" className="form__input PostMeet__input--checkbox" name="food__preferences" value="Dairy-Free" onChange={this.handleCheck}/> Dairy-Free
           </div>
