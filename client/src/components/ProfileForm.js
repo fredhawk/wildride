@@ -71,7 +71,7 @@ class Profile extends Component {
             <option value="Vegetarian">Vegetarian</option>
             <option value="Vegan">Vegan</option>
             <option value="Low Carb">Low Carb</option>
-            <option value="No dairy">No dairy</option>
+            <option value="Dairy-Free">Dairy-Free</option>
           </select>
           <label className="form__label">Description:</label>
           <textarea value={this.state.user.description} onChange={this.handleChange} name="description" className="form__input text" placeholder="A short description about yourself"></textarea><br />

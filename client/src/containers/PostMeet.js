@@ -83,7 +83,7 @@ class PostMeet extends Component {
             <input type="checkbox" className="form__input PostMeet__input--checkbox" name="food__preferences" value="Vegan" onChange={this.handleCheck}/> Vegan
             <input type="checkbox" className="form__input PostMeet__input--checkbox" name="food__preferences" value="Vegetarian" onChange={this.handleCheck}/> Vegetarian
             <input type="checkbox" className="form__input PostMeet__input--checkbox" name="food__preferences" value="Low Carb" onChange={this.handleCheck}/> Low Carb
-            <input type="checkbox" className="form__input PostMeet__input--checkbox" name="food__preferences" value="No dairy" onChange={this.handleCheck}/> No dairy
+            <input type="checkbox" className="form__input PostMeet__input--checkbox" name="food__preferences" value="Dairy-Free" onChange={this.handleCheck}/> Dairy-Free
           </div>
           <input type="submit" className="form__button" defaultValue="Set up a meet" />
         </form>
