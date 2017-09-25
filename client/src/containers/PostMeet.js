@@ -34,12 +34,12 @@ class PostMeet extends Component {
         if (type.checked) food_types.push(type.value);
       }) // todo: send food_types to DB
     }
-   /* axios
-      .post('/api/meet/new', { about, location, date, food })
+    axios
+      .post('/api/meet/new', { about, location, date, food, food_types })
       .then(response => {
         this.props.history.push('/profile');
       })
-      .catch(err => console.error(err));*/
+      .catch(err => console.error(err));
       console.log(food_types);
   }
   toggleBlock(e) { // Toggle food-preferences block
