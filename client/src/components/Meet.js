@@ -36,7 +36,7 @@ class Meet extends Component {
   }
 
   renderContent() {
-    const { location, about, food, date, attendees } = this.state.meet.data;
+    const { location, about, food, date, attendees, food_types } = this.state.meet.data;
     const formatedDate = distanceInWordsToNow(date);
     return (
       <article className="Meet">
@@ -54,7 +54,7 @@ class Meet extends Component {
           </h3>
         </div>
         <div className="Meet__item">
-          <h3>Food will {food ? 'be served.' : 'not be served.'}</h3>
+          <h3>Food will {food ? `be served. ${ food_types[0] ? `(Including: ${food_types.join(", ")})` : ""}` : 'not be served.'}</h3>
         </div>
         <div className="Meet__item">
           <h3>

@@ -20,6 +20,9 @@ const meetSchema = new Schema({
     type: Boolean,
     required: 'Please inform if there will be food served.'
   },
+  food_types: {
+    type: [String]
+  },
   author: {
     type: mongoose.Schema.ObjectId,
     ref: 'User',
